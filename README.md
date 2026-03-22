@@ -1,225 +1,147 @@
-# Industrial AI Predictive Maintenance
-**NASA Bearing Dataset | Deep Learning Anomaly Detection**
+# BearingMind — Industrial AI Predictive Maintenance
 
-## Overview
+**Multi-model bearing fault detection using vibration analysis, deep learning, and explainable AI**
 
-This project builds a predictive maintenance system for rotating machinery using vibration sensor data. Using the **NASA IMS Bearing Dataset**, the project demonstrates how Industrial AI systems detect early signs of mechanical failure through signal processing, feature engineering, and anomaly detection models.
+## What this project does
 
-The goal is to build an **end-to-end machine learning workflow** similar to real industrial monitoring systems used in energy, manufacturing, and heavy equipment industries.
+BearingMind monitors industrial bearings using vibration sensor data and answers three questions a maintenance engineer needs:
 
----
+1. **Is something wrong?** — Isolation Forest on statistical features + CNN Autoencoder on spectrograms
+2. **How much life is left?** — LSTM neural network predicting Remaining Useful Life (RUL)
+3. **Why does the model think that?** — SHAP explainability + CNN reconstruction error heatmaps
 
-## Project Objectives
+All three answers feed into an RCA (Root Cause Analysis) context that a downstream LLM agent can use to generate plain-English maintenance reports.
 
-- Analyze vibration signals from rotating bearings
-- Extract statistical features from time-series data
-- Detect abnormal machine behavior using machine learning
-- Visualize degradation patterns over time
+## Architecture
 
----
+```
+NASA IMS raw vibration data (20,480 Hz × 4 bearings × 984 snapshots)
+    │
+    ├── features.py ──────────────── 16 statistical features per bearing
+    │       │
+    │       ├── isolation_forest.py ─ unsupervised anomaly detection
+    │       │
+    │       └── rul_lstm.py ──────── LSTM RUL prediction (0→1 degradation)
+    │
+    ├── signal_to_image.py ──────── STFT + Mel + GAF → 64×64×3 images
+    │       │
+    │       └── cv_anomaly_detector.py ── CNN Autoencoder anomaly detection
+    │
+    └── shap_explainer.py ──────── SHAP (IF + LSTM) + CNN heatmaps → RCA context
+```
+
+## Models
+
+| Module | Model | Task | Input |
+|---|---|---|---|
+| `isolation_forest.py` | Isolation Forest | Anomaly detection | 16 statistical features |
+| `rul_lstm.py` | 2-layer stacked LSTM | RUL prediction | Sliding window of features |
+| `cv_anomaly_detector.py` | CNN Autoencoder | Visual anomaly detection | 64×64×3 spectrograms |
+| `shap_explainer.py` | SHAP + heatmaps | Explainability | All model outputs |
 
 ## Dataset
 
-**NASA IMS Bearing Dataset**
+**NASA IMS Bearing Dataset** — 2nd test set
 
-This dataset contains vibration measurements collected from bearings running until failure under controlled conditions.
+- 4 bearings monitored simultaneously at 20,480 Hz
+- 984 snapshots over ~35 days of continuous operation
+- Run-to-failure: bearing 3 develops an outer race fault
+- Download: [NASA Prognostics Data Repository](https://www.nasa.gov/content/prognostics-center-of-excellence-data-set-repository)
 
-### Dataset Characteristics
-
-- High-frequency vibration signals
-- Multiple bearings monitored simultaneously
-- Progressive degradation leading to failure
-
----
-
-## Repository Structure
-
-```text
-industrial-ai-scada
-│
-├── notebooks
-│   ├── nasa_bearing_eda.ipynb
-│   └── nasa_bearing_eda.py
-│
-├── src
-│   ├── features.py
-│   ├── cv_anomaly_detector.py
-│   └── __init__.py
-│
-├── results
-│   ├── rms_over_time.png
-│   ├── rms_individual_bearings.png
-│   └── first_vs_last.png
-│
-└── README.md
-```
-
----
-
-## Exploratory Data Analysis
-
-The **EDA stage** investigates vibration signal behavior over time.
-
-### Key analyses performed
-
-- RMS vibration trends over time
-- Comparison across multiple bearings
-- Distribution differences between early and late stage signals
-
-### Visualizations generated
-
-- RMS vibration over time
-- Individual bearing RMS comparisons
-- Early vs late signal distributions
-
-All plots are stored in the **`results/`** directory.
-
----
-
-## Feature Engineering
-
-Feature extraction is implemented in:
-
-```python
-src/features.py
-```
-
-### Extracted Features
-
-Statistical features derived from vibration signals:
-
-- Mean
-- Standard deviation
-- Root Mean Square (RMS)
-- Peak values
-
-These features summarize vibration behavior and help machine learning models detect abnormal conditions.
-
----
-
-## Anomaly Detection
-
-Implemented in:
-
-```python
-src/cv_anomaly_detector.py
-```
-
-The project uses a **CNN autoencoder-based anomaly detection model**.
-
-### Model Workflow
-
-1. Train the model on normal vibration patterns
-2. Reconstruct signals using the autoencoder
-3. Compute reconstruction error
-4. Detect anomalies when reconstruction error exceeds a threshold
-
-This approach is commonly used in **industrial predictive maintenance systems**.
-
----
-
-## Results
-
-Key outputs include vibration analysis plots that show machine degradation behavior.
-
-### Example Insights
-
-- **RMS trend over time** showing increasing vibration amplitude as failure approaches
-- **Bearing comparison plots** highlighting abnormal behavior
-- **Signal distribution comparison** between early and late stages
-
-These visualizations confirm that vibration characteristics change as mechanical failure approaches.
-
----
-
-## Installation
-
-Clone the repository:
+## Quick start
 
 ```bash
-git clone https://github.com/yourusername/industrial-ai-scada.git
-```
-
-Navigate to the project directory:
-
-```bash
+git clone https://github.com/<your-username>/industrial-ai-scada.git
 cd industrial-ai-scada
-```
-
-Install dependencies:
-
-```bash
 pip install -r requirements.txt
 ```
 
-### Typical Dependencies
-
-```text
-numpy
-pandas
-matplotlib
-scikit-learn
-scipy
-tensorflow or pytorch
-```
-
----
-
-## Running the Project
-
-### Run Exploratory Data Analysis
+### Run the full pipeline
 
 ```bash
-jupyter notebook notebooks/nasa_bearing_eda.ipynb
+# Step 1: Extract features from raw vibration data
+python src/features.py <path-to-2nd_test> results/feature_matrix.csv
+
+# Step 2: Train Isolation Forest anomaly detectors
+python src/isolation_forest.py results/feature_matrix.csv results/if/ 500
+
+# Step 3: Train LSTM RUL predictors
+python src/rul_lstm.py results/feature_matrix.csv results/rul/ 30 50
+
+# Step 4: Convert signals to spectrogram images
+python src/signal_to_image.py <path-to-2nd_test> data/images/ 500 4
+
+# Step 5: Train CNN Autoencoder on healthy spectrograms
+python src/cv_anomaly_detector.py data/images/normal data/images/all results/cv/ 50
+
+# Step 6: Run SHAP explainability (uses saved models)
+python src/shap_explainer.py results/feature_matrix.csv results/ results/shap/ 950
 ```
 
-### Run Feature Engineering
+## Feature engineering
 
-```bash
-python src/features.py
+16 features extracted per bearing per snapshot:
+
+- **Time-domain**: RMS, peak-to-peak, kurtosis, crest factor, skewness, shape factor, impulse factor, margin factor
+- **Frequency-domain**: spectral centroid, spectral bandwidth, spectral entropy, dominant frequency, high-frequency energy ratio
+- **Fault-band energy**: BPFO (outer race), BPFI (inner race), BSF (ball)
+
+## Explainability
+
+The SHAP explainer provides three layers of evidence for the RCA agent:
+
+1. **Isolation Forest SHAP** (TreeExplainer) — which statistical features drive the anomaly score
+2. **LSTM SHAP** (GradientExplainer) — which features drive the RUL prediction
+3. **CNN reconstruction heatmap** — which frequency bands in the spectrogram show abnormal patterns, mapped to fault types via frequency → fault mapping
+
+Example RCA context output:
+```
+Bearing: b1_ch1
+Snapshot index: 950
+Anomaly score: 0.4523
+RUL score: 0.1200 (CRITICAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - BPFO band energy (outer race): +0.3100 (↑ toward anomaly)
+  - Kurtosis: +0.2400 (↑ toward anomaly)
+
+CNN Autoencoder spectral analysis:
+  Reconstruction MSE: 0.012345 (ANOMALY)
+  Worst channel: STFT spectrogram
+  Worst frequency band: mid_low
+  Band fault inference: primary bearing fault frequency (BPFO/BPFI/BSF range)
+
+Probable fault type: outer race fault
 ```
 
-### Run Anomaly Detection
+## Repository structure
 
-```bash
-python src/cv_anomaly_detector.py
+```
+industrial-ai-scada/
+├── src/
+│   ├── __init__.py
+│   ├── features.py              # 16-feature extraction
+│   ├── isolation_forest.py      # Isolation Forest anomaly detection
+│   ├── signal_to_image.py       # STFT + Mel + GAF → 64×64×3 images
+│   ├── cv_anomaly_detector.py   # CNN Autoencoder anomaly detection
+│   ├── rul_lstm.py              # LSTM RUL prediction
+│   └── shap_explainer.py        # SHAP + CNN heatmaps → RCA context
+├── notebooks/
+│   ├── nasa_bearing_eda.ipynb
+│   └── nasa_bearing_eda.py
+├── results/                     # Generated outputs (see .gitignore)
+├── requirements.txt
+├── .gitignore
+└── README.md
 ```
 
----
+## Next steps (Week 2)
 
-## Applications
-
-This system demonstrates techniques used in real industrial AI systems such as:
-
-- Predictive maintenance for rotating machinery
-- Fault detection in motors and turbines
-- Industrial IoT monitoring systems
-- Smart manufacturing analytics
-
-### Industries Using These Systems
-
-- Energy
-- Manufacturing
-- Oil & Gas
-- Aerospace
-- Utilities
-
----
-
-## Future Improvements
-
-Planned improvements include:
-
-- Time-series cross-validation
-- Remaining Useful Life (RUL) prediction using LSTM
-- Model explainability using SHAP
-- Real-time anomaly detection pipeline
-- Drift detection and monitoring
-
----
+- LangGraph multi-agent orchestration
+- MCP servers: equipment manual RAG, CMMS mock, weather API, parts inventory
+- RCA Agent using Claude API for plain-English diagnostic reports
+- Streamlit or Gradio dashboard for live monitoring
 
 ## Author
 
-**Alok**
-
-Graduate student focusing on **Industrial AI, Machine Learning, and Energy Systems**.
+**Alok** — MS student at Northeastern University, focusing on Industrial AI and predictive maintenance for energy and manufacturing systems. 6 years of prior experience in industrial IoT and SCADA systems.

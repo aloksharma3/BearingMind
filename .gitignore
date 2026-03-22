@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+*.so
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data — too large for git (download separately)
+data/
+*.zip
+
+# Model artifacts — too large for git
+# Retrain locally using the CLI commands in README
+results/if/models/*.pkl
+results/rul/models/*.pt
+results/cv/model/
+
+# Temporary / generated images (regenerate with signal_to_image.py)
+data/images/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+
+# Logs
+*.log

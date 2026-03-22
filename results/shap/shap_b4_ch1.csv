@@ -1,0 +1,901 @@
+bearing_id,snapshot_idx,anomaly_score,rul_score,top_feature_1,top_feature_2,top_feature_3,probable_fault,rca_context
+b4_ch1,0,0.0021582196701616096,1.0,Spectral bandwidth (Hz),Spectral centroid (Hz),Spectral entropy,distributed damage (multiple fault modes),"Bearing: b4_ch1
+Snapshot index: 0
+Anomaly score: 0.0022
+RUL score: 1.0000 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral bandwidth (Hz): -1.4074 (↓ toward normal)
+  - Spectral centroid (Hz): -1.3918 (↓ toward normal)
+  - Spectral entropy: -1.1303 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0005 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0003 (↓ reduces RUL)
+  - RMS vibration: -0.0002 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b4_ch1,3,0.12226892108042886,1.0,Kurtosis,Crest factor,Peak-to-peak amplitude,impulsive fault (spalling / cracking),"Bearing: b4_ch1
+Snapshot index: 3
+Anomaly score: 0.1223
+RUL score: 1.0000 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Kurtosis: -1.6066 (↓ toward normal)
+  - Crest factor: -1.4756 (↓ toward normal)
+  - Peak-to-peak amplitude: -1.3516 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0001 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): +0.0001 (↑ increases RUL)
+  - RMS vibration: -0.0001 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: impulsive fault (spalling / cracking)"
+b4_ch1,67,0.013594682867682617,0.5857383012771606,Crest factor,Peak-to-peak amplitude,Margin factor,impulsive fault (early stage),"Bearing: b4_ch1
+Snapshot index: 67
+Anomaly score: 0.0136
+RUL score: 0.5857 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Crest factor: -0.9601 (↓ toward normal)
+  - Peak-to-peak amplitude: -0.9585 (↓ toward normal)
+  - Margin factor: -0.7612 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): +0.0001 (↑ increases RUL)
+  - Spectral centroid (Hz): +0.0001 (↑ increases RUL)
+  - Shape factor: -0.0001 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: impulsive fault (early stage)"
+b4_ch1,79,0.02327655045104582,0.591602623462677,Peak-to-peak amplitude,Crest factor,Kurtosis,impulsive fault (early stage),"Bearing: b4_ch1
+Snapshot index: 79
+Anomaly score: 0.0233
+RUL score: 0.5916 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Peak-to-peak amplitude: -1.4092 (↓ toward normal)
+  - Crest factor: -1.2314 (↓ toward normal)
+  - Kurtosis: -1.0268 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): +0.0000 (↑ increases RUL)
+  - BPFI band energy (inner race): +0.0000 (↑ increases RUL)
+  - Spectral bandwidth (Hz): -0.0000 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: impulsive fault (early stage)"
+b4_ch1,187,0.02130759939475413,0.5772027969360352,Peak-to-peak amplitude,Crest factor,RMS vibration,impulsive fault (early stage),"Bearing: b4_ch1
+Snapshot index: 187
+Anomaly score: 0.0213
+RUL score: 0.5772 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Peak-to-peak amplitude: -1.1488 (↓ toward normal)
+  - Crest factor: -1.0127 (↓ toward normal)
+  - RMS vibration: -0.8272 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0002 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0001 (↓ reduces RUL)
+  - BPFI band energy (inner race): -0.0001 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: impulsive fault (early stage)"
+b4_ch1,635,0.051081072676290806,0.448735773563385,Crest factor,Peak-to-peak amplitude,Margin factor,impulsive fault (early stage),"Bearing: b4_ch1
+Snapshot index: 635
+Anomaly score: 0.0511
+RUL score: 0.4487 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Crest factor: -1.1879 (↓ toward normal)
+  - Peak-to-peak amplitude: -1.0782 (↓ toward normal)
+  - Margin factor: -0.8988 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0016 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0010 (↓ reduces RUL)
+  - BPFO band energy (outer race): -0.0005 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: impulsive fault (early stage)"
+b4_ch1,685,0.0252430105333612,0.37423333525657654,RMS vibration,Peak-to-peak amplitude,BSF band energy (ball fault),rolling element (ball) fault,"Bearing: b4_ch1
+Snapshot index: 685
+Anomaly score: 0.0252
+RUL score: 0.3742 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - RMS vibration: -0.6616 (↓ toward normal)
+  - Peak-to-peak amplitude: -0.4952 (↓ toward normal)
+  - BSF band energy (ball fault): -0.4864 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0015 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0014 (↓ reduces RUL)
+  - RMS vibration: -0.0009 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: rolling element (ball) fault"
+b4_ch1,694,0.002441577928645189,0.3711790442466736,Dominant frequency (Hz),RMS vibration,BPFI band energy (inner race),inner race fault,"Bearing: b4_ch1
+Snapshot index: 694
+Anomaly score: 0.0024
+RUL score: 0.3712 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Dominant frequency (Hz): -1.4774 (↓ toward normal)
+  - RMS vibration: -0.8840 (↓ toward normal)
+  - BPFI band energy (inner race): -0.5731 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0016 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0015 (↓ reduces RUL)
+  - RMS vibration: -0.0010 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: inner race fault"
+b4_ch1,702,0.011610653446780361,0.3669724762439728,Spectral entropy,RMS vibration,High-freq energy ratio,distributed damage (multiple fault modes),"Bearing: b4_ch1
+Snapshot index: 702
+Anomaly score: 0.0116
+RUL score: 0.3670 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.7498 (↓ toward normal)
+  - RMS vibration: -0.7324 (↓ toward normal)
+  - High-freq energy ratio: -0.6638 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0019 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0016 (↓ reduces RUL)
+  - RMS vibration: -0.0010 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b4_ch1,704,0.022174548230350366,0.3448624014854431,Shape factor,RMS vibration,High-freq energy ratio,rolling element (ball) fault,"Bearing: b4_ch1
+Snapshot index: 704
+Anomaly score: 0.0222
+RUL score: 0.3449 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Shape factor: -0.7097 (↓ toward normal)
+  - RMS vibration: -0.7051 (↓ toward normal)
+  - High-freq energy ratio: -0.5964 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0019 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0015 (↓ reduces RUL)
+  - RMS vibration: -0.0012 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: rolling element (ball) fault"
+b4_ch1,705,0.013118558697863936,0.3369097411632538,RMS vibration,Spectral entropy,High-freq energy ratio,distributed damage (multiple fault modes),"Bearing: b4_ch1
+Snapshot index: 705
+Anomaly score: 0.0131
+RUL score: 0.3369 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - RMS vibration: -0.7205 (↓ toward normal)
+  - Spectral entropy: -0.7063 (↓ toward normal)
+  - High-freq energy ratio: -0.6352 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0017 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0013 (↓ reduces RUL)
+  - RMS vibration: -0.0012 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b4_ch1,706,0.03501876456825548,0.33100229501724243,Peak-to-peak amplitude,RMS vibration,Spectral entropy,distributed damage (multiple fault modes),"Bearing: b4_ch1
+Snapshot index: 706
+Anomaly score: 0.0350
+RUL score: 0.3310 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Peak-to-peak amplitude: -0.7834 (↓ toward normal)
+  - RMS vibration: -0.7084 (↓ toward normal)
+  - Spectral entropy: -0.6101 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0020 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0017 (↓ reduces RUL)
+  - RMS vibration: -0.0015 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b4_ch1,707,0.0011377490016013514,0.3265002369880676,RMS vibration,Spectral entropy,High-freq energy ratio,distributed damage (multiple fault modes),"Bearing: b4_ch1
+Snapshot index: 707
+Anomaly score: 0.0011
+RUL score: 0.3265 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - RMS vibration: -0.7189 (↓ toward normal)
+  - Spectral entropy: -0.6689 (↓ toward normal)
+  - High-freq energy ratio: -0.6560 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0017 (↓ reduces RUL)
+  - RMS vibration: -0.0014 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0014 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b4_ch1,709,0.06663909893333486,0.32216909527778625,Spectral entropy,Kurtosis,Peak-to-peak amplitude,distributed damage (multiple fault modes),"Bearing: b4_ch1
+Snapshot index: 709
+Anomaly score: 0.0666
+RUL score: 0.3222 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.8657 (↓ toward normal)
+  - Kurtosis: -0.7066 (↓ toward normal)
+  - Peak-to-peak amplitude: -0.6495 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0017 (↓ reduces RUL)
+  - RMS vibration: -0.0015 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0014 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b4_ch1,710,0.010745635840828993,0.31936290860176086,RMS vibration,BPFI band energy (inner race),BSF band energy (ball fault),inner race fault,"Bearing: b4_ch1
+Snapshot index: 710
+Anomaly score: 0.0107
+RUL score: 0.3194 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - RMS vibration: -0.7468 (↓ toward normal)
+  - BPFI band energy (inner race): -0.5608 (↓ toward normal)
+  - BSF band energy (ball fault): -0.5589 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0018 (↓ reduces RUL)
+  - RMS vibration: -0.0015 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0015 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: inner race fault"
+b4_ch1,711,0.00475909145267317,0.318703830242157,Spectral entropy,RMS vibration,BPFI band energy (inner race),distributed damage (multiple fault modes),"Bearing: b4_ch1
+Snapshot index: 711
+Anomaly score: 0.0048
+RUL score: 0.3187 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.8355 (↓ toward normal)
+  - RMS vibration: -0.7235 (↓ toward normal)
+  - BPFI band energy (inner race): -0.6351 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0015 (↓ reduces RUL)
+  - RMS vibration: -0.0014 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0012 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b4_ch1,712,0.028723389319866066,0.31865188479423523,Spectral entropy,Shape factor,RMS vibration,distributed damage (multiple fault modes),"Bearing: b4_ch1
+Snapshot index: 712
+Anomaly score: 0.0287
+RUL score: 0.3187 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.7138 (↓ toward normal)
+  - Shape factor: -0.6796 (↓ toward normal)
+  - RMS vibration: -0.6730 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0017 (↓ reduces RUL)
+  - RMS vibration: -0.0015 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0014 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b4_ch1,713,0.02595573320112521,0.3180907964706421,Spectral entropy,RMS vibration,BSF band energy (ball fault),distributed damage (multiple fault modes),"Bearing: b4_ch1
+Snapshot index: 713
+Anomaly score: 0.0260
+RUL score: 0.3181 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.8348 (↓ toward normal)
+  - RMS vibration: -0.6623 (↓ toward normal)
+  - BSF band energy (ball fault): -0.5462 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0017 (↓ reduces RUL)
+  - RMS vibration: -0.0016 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0014 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b4_ch1,714,0.02829616254599432,0.31729984283447266,RMS vibration,Spectral entropy,Shape factor,distributed damage (multiple fault modes),"Bearing: b4_ch1
+Snapshot index: 714
+Anomaly score: 0.0283
+RUL score: 0.3173 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - RMS vibration: -0.6926 (↓ toward normal)
+  - Spectral entropy: -0.6602 (↓ toward normal)
+  - Shape factor: -0.6586 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0018 (↓ reduces RUL)
+  - RMS vibration: -0.0017 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0015 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b4_ch1,715,0.0161218813423486,0.3166135549545288,Spectral entropy,RMS vibration,BSF band energy (ball fault),distributed damage (multiple fault modes),"Bearing: b4_ch1
+Snapshot index: 715
+Anomaly score: 0.0161
+RUL score: 0.3166 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.9763 (↓ toward normal)
+  - RMS vibration: -0.6996 (↓ toward normal)
+  - BSF band energy (ball fault): -0.6230 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0017 (↓ reduces RUL)
+  - RMS vibration: -0.0016 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0014 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b4_ch1,716,0.006232305676423078,0.3179202973842621,RMS vibration,Spectral entropy,High-freq energy ratio,distributed damage (multiple fault modes),"Bearing: b4_ch1
+Snapshot index: 716
+Anomaly score: 0.0062
+RUL score: 0.3179 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - RMS vibration: -0.6991 (↓ toward normal)
+  - Spectral entropy: -0.6544 (↓ toward normal)
+  - High-freq energy ratio: -0.6340 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0016 (↓ reduces RUL)
+  - RMS vibration: -0.0015 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0013 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b4_ch1,717,0.011775431467498265,0.31736359000205994,Spectral entropy,RMS vibration,BSF band energy (ball fault),distributed damage (multiple fault modes),"Bearing: b4_ch1
+Snapshot index: 717
+Anomaly score: 0.0118
+RUL score: 0.3174 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.9976 (↓ toward normal)
+  - RMS vibration: -0.6905 (↓ toward normal)
+  - BSF band energy (ball fault): -0.5949 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0017 (↓ reduces RUL)
+  - RMS vibration: -0.0016 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0014 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b4_ch1,719,0.0193552208489004,0.3169389069080353,RMS vibration,Spectral entropy,BSF band energy (ball fault),distributed damage (multiple fault modes),"Bearing: b4_ch1
+Snapshot index: 719
+Anomaly score: 0.0194
+RUL score: 0.3169 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - RMS vibration: -0.6951 (↓ toward normal)
+  - Spectral entropy: -0.6869 (↓ toward normal)
+  - BSF band energy (ball fault): -0.5463 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0017 (↓ reduces RUL)
+  - RMS vibration: -0.0016 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0014 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b4_ch1,720,0.026437648472759756,0.3167489767074585,Spectral entropy,RMS vibration,BSF band energy (ball fault),distributed damage (multiple fault modes),"Bearing: b4_ch1
+Snapshot index: 720
+Anomaly score: 0.0264
+RUL score: 0.3167 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.7951 (↓ toward normal)
+  - RMS vibration: -0.6537 (↓ toward normal)
+  - BSF band energy (ball fault): -0.5426 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0013 (↓ reduces RUL)
+  - RMS vibration: -0.0013 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0010 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b4_ch1,721,0.00988871937972835,0.31587064266204834,RMS vibration,Spectral entropy,High-freq energy ratio,distributed damage (multiple fault modes),"Bearing: b4_ch1
+Snapshot index: 721
+Anomaly score: 0.0099
+RUL score: 0.3159 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - RMS vibration: -0.7309 (↓ toward normal)
+  - Spectral entropy: -0.6662 (↓ toward normal)
+  - High-freq energy ratio: -0.6397 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0016 (↓ reduces RUL)
+  - RMS vibration: -0.0015 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0012 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b4_ch1,722,0.026899420927314233,0.3164975941181183,RMS vibration,Shape factor,High-freq energy ratio,rolling element (ball) fault,"Bearing: b4_ch1
+Snapshot index: 722
+Anomaly score: 0.0269
+RUL score: 0.3165 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - RMS vibration: -0.7178 (↓ toward normal)
+  - Shape factor: -0.6333 (↓ toward normal)
+  - High-freq energy ratio: -0.5435 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0019 (↓ reduces RUL)
+  - RMS vibration: -0.0017 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0014 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: rolling element (ball) fault"
+b4_ch1,724,0.03299208184061697,0.31552809476852417,Spectral entropy,RMS vibration,BPFI band energy (inner race),distributed damage (multiple fault modes),"Bearing: b4_ch1
+Snapshot index: 724
+Anomaly score: 0.0330
+RUL score: 0.3155 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.7964 (↓ toward normal)
+  - RMS vibration: -0.6652 (↓ toward normal)
+  - BPFI band energy (inner race): -0.6023 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0018 (↓ reduces RUL)
+  - RMS vibration: -0.0016 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0013 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b4_ch1,726,0.032573179246300654,0.3156561255455017,Dominant frequency (Hz),RMS vibration,Spectral entropy,distributed damage (multiple fault modes),"Bearing: b4_ch1
+Snapshot index: 726
+Anomaly score: 0.0326
+RUL score: 0.3157 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Dominant frequency (Hz): -0.8918 (↓ toward normal)
+  - RMS vibration: -0.6313 (↓ toward normal)
+  - Spectral entropy: -0.6209 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0016 (↓ reduces RUL)
+  - RMS vibration: -0.0015 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0013 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b4_ch1,728,0.011870158083408522,0.3163520395755768,RMS vibration,High-freq energy ratio,BPFI band energy (inner race),inner race fault,"Bearing: b4_ch1
+Snapshot index: 728
+Anomaly score: 0.0119
+RUL score: 0.3164 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - RMS vibration: -0.7308 (↓ toward normal)
+  - High-freq energy ratio: -0.6872 (↓ toward normal)
+  - BPFI band energy (inner race): -0.5579 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0016 (↓ reduces RUL)
+  - RMS vibration: -0.0016 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0013 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: inner race fault"
+b4_ch1,730,0.0013730094974582219,0.31684431433677673,Spectral entropy,RMS vibration,High-freq energy ratio,distributed damage (multiple fault modes),"Bearing: b4_ch1
+Snapshot index: 730
+Anomaly score: 0.0014
+RUL score: 0.3168 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.8817 (↓ toward normal)
+  - RMS vibration: -0.7114 (↓ toward normal)
+  - High-freq energy ratio: -0.6235 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - RMS vibration: -0.0018 (↓ reduces RUL)
+  - BSF band energy (ball fault): -0.0017 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0015 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b4_ch1,731,0.06095275896037322,0.3164498507976532,Dominant frequency (Hz),RMS vibration,BPFI band energy (inner race),inner race fault,"Bearing: b4_ch1
+Snapshot index: 731
+Anomaly score: 0.0610
+RUL score: 0.3164 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Dominant frequency (Hz): -0.8433 (↓ toward normal)
+  - RMS vibration: -0.6313 (↓ toward normal)
+  - BPFI band energy (inner race): -0.6119 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - RMS vibration: -0.0015 (↓ reduces RUL)
+  - BSF band energy (ball fault): -0.0015 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0013 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: inner race fault"
+b4_ch1,732,0.01706011374891414,0.31554141640663147,Spectral entropy,RMS vibration,Shape factor,distributed damage (multiple fault modes),"Bearing: b4_ch1
+Snapshot index: 732
+Anomaly score: 0.0171
+RUL score: 0.3155 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.7348 (↓ toward normal)
+  - RMS vibration: -0.7076 (↓ toward normal)
+  - Shape factor: -0.6567 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - RMS vibration: -0.0017 (↓ reduces RUL)
+  - BSF band energy (ball fault): -0.0016 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0014 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b4_ch1,733,0.0015390455418341498,0.3160820007324219,Spectral entropy,RMS vibration,BSF band energy (ball fault),distributed damage (multiple fault modes),"Bearing: b4_ch1
+Snapshot index: 733
+Anomaly score: 0.0015
+RUL score: 0.3161 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.8858 (↓ toward normal)
+  - RMS vibration: -0.7431 (↓ toward normal)
+  - BSF band energy (ball fault): -0.6451 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - RMS vibration: -0.0017 (↓ reduces RUL)
+  - BSF band energy (ball fault): -0.0016 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0014 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b4_ch1,734,0.029005053294348215,0.31644463539123535,Spectral entropy,RMS vibration,Peak-to-peak amplitude,distributed damage (multiple fault modes),"Bearing: b4_ch1
+Snapshot index: 734
+Anomaly score: 0.0290
+RUL score: 0.3164 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.8293 (↓ toward normal)
+  - RMS vibration: -0.6417 (↓ toward normal)
+  - Peak-to-peak amplitude: -0.5444 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - RMS vibration: -0.0018 (↓ reduces RUL)
+  - BSF band energy (ball fault): -0.0018 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0015 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b4_ch1,735,0.00016778993328725456,0.3160973787307739,RMS vibration,Spectral entropy,BPFI band energy (inner race),distributed damage (multiple fault modes),"Bearing: b4_ch1
+Snapshot index: 735
+Anomaly score: 0.0002
+RUL score: 0.3161 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - RMS vibration: -0.7426 (↓ toward normal)
+  - Spectral entropy: -0.6414 (↓ toward normal)
+  - BPFI band energy (inner race): -0.6132 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - RMS vibration: -0.0014 (↓ reduces RUL)
+  - BSF band energy (ball fault): -0.0014 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0012 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b4_ch1,737,0.019427729793214943,0.31634941697120667,Spectral entropy,RMS vibration,Peak-to-peak amplitude,distributed damage (multiple fault modes),"Bearing: b4_ch1
+Snapshot index: 737
+Anomaly score: 0.0194
+RUL score: 0.3163 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.7747 (↓ toward normal)
+  - RMS vibration: -0.7288 (↓ toward normal)
+  - Peak-to-peak amplitude: -0.6108 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - RMS vibration: -0.0018 (↓ reduces RUL)
+  - BSF band energy (ball fault): -0.0017 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0015 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b4_ch1,739,0.008575566377765687,0.3160218894481659,RMS vibration,Spectral entropy,BSF band energy (ball fault),distributed damage (multiple fault modes),"Bearing: b4_ch1
+Snapshot index: 739
+Anomaly score: 0.0086
+RUL score: 0.3160 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - RMS vibration: -0.7350 (↓ toward normal)
+  - Spectral entropy: -0.7032 (↓ toward normal)
+  - BSF band energy (ball fault): -0.6222 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - RMS vibration: -0.0018 (↓ reduces RUL)
+  - BSF band energy (ball fault): -0.0017 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0015 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b4_ch1,740,0.024121068549064706,0.3155200183391571,Dominant frequency (Hz),RMS vibration,High-freq energy ratio,rolling element (ball) fault,"Bearing: b4_ch1
+Snapshot index: 740
+Anomaly score: 0.0241
+RUL score: 0.3155 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Dominant frequency (Hz): -0.9970 (↓ toward normal)
+  - RMS vibration: -0.6594 (↓ toward normal)
+  - High-freq energy ratio: -0.6126 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - RMS vibration: -0.0017 (↓ reduces RUL)
+  - BSF band energy (ball fault): -0.0017 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0015 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: rolling element (ball) fault"
+b4_ch1,741,0.013671383142110138,0.3155088424682617,RMS vibration,Spectral entropy,BPFI band energy (inner race),distributed damage (multiple fault modes),"Bearing: b4_ch1
+Snapshot index: 741
+Anomaly score: 0.0137
+RUL score: 0.3155 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - RMS vibration: -0.7256 (↓ toward normal)
+  - Spectral entropy: -0.6644 (↓ toward normal)
+  - BPFI band energy (inner race): -0.6114 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - RMS vibration: -0.0015 (↓ reduces RUL)
+  - BSF band energy (ball fault): -0.0014 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0013 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b4_ch1,742,0.01595123875678983,0.31515756249427795,Spectral entropy,RMS vibration,BPFI band energy (inner race),distributed damage (multiple fault modes),"Bearing: b4_ch1
+Snapshot index: 742
+Anomaly score: 0.0160
+RUL score: 0.3152 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.7572 (↓ toward normal)
+  - RMS vibration: -0.7297 (↓ toward normal)
+  - BPFI band energy (inner race): -0.6428 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0017 (↓ reduces RUL)
+  - RMS vibration: -0.0017 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0015 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b4_ch1,744,0.003568660782320765,0.31600433588027954,Dominant frequency (Hz),RMS vibration,High-freq energy ratio,rolling element (ball) fault,"Bearing: b4_ch1
+Snapshot index: 744
+Anomaly score: 0.0036
+RUL score: 0.3160 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Dominant frequency (Hz): -1.0885 (↓ toward normal)
+  - RMS vibration: -0.7810 (↓ toward normal)
+  - High-freq energy ratio: -0.6448 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - RMS vibration: -0.0015 (↓ reduces RUL)
+  - BSF band energy (ball fault): -0.0015 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0013 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: rolling element (ball) fault"
+b4_ch1,746,0.002381009095732467,0.3165050745010376,Dominant frequency (Hz),RMS vibration,High-freq energy ratio,rolling element (ball) fault,"Bearing: b4_ch1
+Snapshot index: 746
+Anomaly score: 0.0024
+RUL score: 0.3165 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Dominant frequency (Hz): -1.1663 (↓ toward normal)
+  - RMS vibration: -0.7337 (↓ toward normal)
+  - High-freq energy ratio: -0.5524 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0020 (↓ reduces RUL)
+  - RMS vibration: -0.0019 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0017 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: rolling element (ball) fault"
+b4_ch1,750,0.0005115997970664976,0.31675589084625244,Spectral entropy,RMS vibration,High-freq energy ratio,distributed damage (multiple fault modes),"Bearing: b4_ch1
+Snapshot index: 750
+Anomaly score: 0.0005
+RUL score: 0.3168 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.8317 (↓ toward normal)
+  - RMS vibration: -0.7613 (↓ toward normal)
+  - High-freq energy ratio: -0.6728 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - RMS vibration: -0.0016 (↓ reduces RUL)
+  - BSF band energy (ball fault): -0.0015 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0013 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b4_ch1,753,0.02254759802483841,0.3167572021484375,Dominant frequency (Hz),RMS vibration,BPFI band energy (inner race),inner race fault,"Bearing: b4_ch1
+Snapshot index: 753
+Anomaly score: 0.0225
+RUL score: 0.3168 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Dominant frequency (Hz): -1.0302 (↓ toward normal)
+  - RMS vibration: -0.6869 (↓ toward normal)
+  - BPFI band energy (inner race): -0.6553 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - RMS vibration: -0.0013 (↓ reduces RUL)
+  - BSF band energy (ball fault): -0.0013 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0012 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: inner race fault"
+b4_ch1,755,0.02561717238539918,0.31665241718292236,Peak-to-peak amplitude,RMS vibration,High-freq energy ratio,rolling element (ball) fault,"Bearing: b4_ch1
+Snapshot index: 755
+Anomaly score: 0.0256
+RUL score: 0.3167 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Peak-to-peak amplitude: -0.8749 (↓ toward normal)
+  - RMS vibration: -0.7008 (↓ toward normal)
+  - High-freq energy ratio: -0.5590 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0018 (↓ reduces RUL)
+  - RMS vibration: -0.0017 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0015 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: rolling element (ball) fault"
+b4_ch1,758,0.056088563855042795,0.31820210814476013,Dominant frequency (Hz),RMS vibration,Shape factor,rolling element (ball) fault,"Bearing: b4_ch1
+Snapshot index: 758
+Anomaly score: 0.0561
+RUL score: 0.3182 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Dominant frequency (Hz): -1.0087 (↓ toward normal)
+  - RMS vibration: -0.6461 (↓ toward normal)
+  - Shape factor: -0.5280 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0015 (↓ reduces RUL)
+  - RMS vibration: -0.0014 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0013 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: rolling element (ball) fault"
+b4_ch1,759,0.12945405483422323,0.31916725635528564,Kurtosis,Peak-to-peak amplitude,Dominant frequency (Hz),impulsive fault (spalling / cracking),"Bearing: b4_ch1
+Snapshot index: 759
+Anomaly score: 0.1295
+RUL score: 0.3192 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Kurtosis: -0.9060 (↓ toward normal)
+  - Peak-to-peak amplitude: -0.7311 (↓ toward normal)
+  - Dominant frequency (Hz): -0.7111 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0019 (↓ reduces RUL)
+  - RMS vibration: -0.0017 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0015 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: impulsive fault (spalling / cracking)"
+b4_ch1,772,0.009664071053794965,0.31916236877441406,Spectral entropy,Peak-to-peak amplitude,RMS vibration,distributed damage (multiple fault modes),"Bearing: b4_ch1
+Snapshot index: 772
+Anomaly score: 0.0097
+RUL score: 0.3192 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.7810 (↓ toward normal)
+  - Peak-to-peak amplitude: -0.7346 (↓ toward normal)
+  - RMS vibration: -0.6953 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0021 (↓ reduces RUL)
+  - RMS vibration: -0.0017 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0014 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b4_ch1,774,6.0320296423110875e-05,0.3193489611148834,Dominant frequency (Hz),RMS vibration,High-freq energy ratio,rolling element (ball) fault,"Bearing: b4_ch1
+Snapshot index: 774
+Anomaly score: 0.0001
+RUL score: 0.3193 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Dominant frequency (Hz): -1.1840 (↓ toward normal)
+  - RMS vibration: -0.7414 (↓ toward normal)
+  - High-freq energy ratio: -0.5929 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0020 (↓ reduces RUL)
+  - RMS vibration: -0.0016 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0013 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: rolling element (ball) fault"
+b4_ch1,783,0.014634238543817735,0.3229981064796448,Dominant frequency (Hz),RMS vibration,Crest factor,impulsive fault (early stage),"Bearing: b4_ch1
+Snapshot index: 783
+Anomaly score: 0.0146
+RUL score: 0.3230 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Dominant frequency (Hz): -1.0597 (↓ toward normal)
+  - RMS vibration: -0.7898 (↓ toward normal)
+  - Crest factor: -0.5170 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BSF band energy (ball fault): -0.0017 (↓ reduces RUL)
+  - RMS vibration: -0.0016 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0012 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: impulsive fault (early stage)"

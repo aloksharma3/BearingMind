@@ -1,0 +1,901 @@
+bearing_id,snapshot_idx,anomaly_score,rul_score,top_feature_1,top_feature_2,top_feature_3,probable_fault,rca_context
+b2_ch1,8,0.046292030512059434,1.0,Kurtosis,Dominant frequency (Hz),Skewness,impulsive fault (spalling / cracking),"Bearing: b2_ch1
+Snapshot index: 8
+Anomaly score: 0.0463
+RUL score: 1.0000 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Kurtosis: -1.3245 (↓ toward normal)
+  - Dominant frequency (Hz): -1.1519 (↓ toward normal)
+  - Skewness: -0.7103 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - RMS vibration: -0.0002 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0002 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0001 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: impulsive fault (spalling / cracking)"
+b2_ch1,24,0.002078968510084378,1.0,Impulse factor,Margin factor,Crest factor,early-stage damage,"Bearing: b2_ch1
+Snapshot index: 24
+Anomaly score: 0.0021
+RUL score: 1.0000 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Impulse factor: -0.9135 (↓ toward normal)
+  - Margin factor: -0.8262 (↓ toward normal)
+  - Crest factor: -0.8091 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral centroid (Hz): -0.0001 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0001 (↓ reduces RUL)
+  - Kurtosis: -0.0000 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: early-stage damage"
+b2_ch1,86,0.050077796382205886,0.8514001369476318,Impulse factor,Crest factor,Peak-to-peak amplitude,impulsive fault (early stage),"Bearing: b2_ch1
+Snapshot index: 86
+Anomaly score: 0.0501
+RUL score: 0.8514 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Impulse factor: -1.3307 (↓ toward normal)
+  - Crest factor: -1.2141 (↓ toward normal)
+  - Peak-to-peak amplitude: -1.2103 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Peak-to-peak amplitude: -0.0000 (↓ reduces RUL)
+  - BPFI band energy (inner race): -0.0000 (↓ reduces RUL)
+  - Kurtosis: +0.0000 (↑ increases RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: impulsive fault (early stage)"
+b2_ch1,156,0.006419943523523264,0.8543618321418762,High-freq energy ratio,Spectral bandwidth (Hz),Peak-to-peak amplitude,undetermined — review sensor data,"Bearing: b2_ch1
+Snapshot index: 156
+Anomaly score: 0.0064
+RUL score: 0.8544 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - High-freq energy ratio: -0.9472 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.8676 (↓ toward normal)
+  - Peak-to-peak amplitude: -0.7133 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral centroid (Hz): +0.0000 (↑ increases RUL)
+  - RMS vibration: -0.0000 (↓ reduces RUL)
+  - High-freq energy ratio: +0.0000 (↑ increases RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: undetermined — review sensor data"
+b2_ch1,321,0.018968498490282926,0.8280960321426392,Impulse factor,Crest factor,Margin factor,impulsive fault (early stage),"Bearing: b2_ch1
+Snapshot index: 321
+Anomaly score: 0.0190
+RUL score: 0.8281 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Impulse factor: -0.7228 (↓ toward normal)
+  - Crest factor: -0.6694 (↓ toward normal)
+  - Margin factor: -0.5488 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - RMS vibration: -0.0003 (↓ reduces RUL)
+  - Peak-to-peak amplitude: -0.0002 (↓ reduces RUL)
+  - Kurtosis: -0.0001 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: impulsive fault (early stage)"
+b2_ch1,601,0.000781732622435749,0.4325855076313019,Dominant frequency (Hz),Shape factor,Spectral bandwidth (Hz),undetermined — review sensor data,"Bearing: b2_ch1
+Snapshot index: 601
+Anomaly score: 0.0008
+RUL score: 0.4326 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Dominant frequency (Hz): -1.0771 (↓ toward normal)
+  - Shape factor: -0.9361 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.6231 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0049 (↓ reduces RUL)
+  - RMS vibration: -0.0032 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0031 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: undetermined — review sensor data"
+b2_ch1,657,0.020645956769932194,0.3286031484603882,Impulse factor,Crest factor,Margin factor,impulsive fault (early stage),"Bearing: b2_ch1
+Snapshot index: 657
+Anomaly score: 0.0206
+RUL score: 0.3286 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Impulse factor: -0.8398 (↓ toward normal)
+  - Crest factor: -0.8082 (↓ toward normal)
+  - Margin factor: -0.7950 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0067 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0033 (↓ reduces RUL)
+  - RMS vibration: -0.0031 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: impulsive fault (early stage)"
+b2_ch1,711,0.06845861677566312,0.2530600130558014,Dominant frequency (Hz),Shape factor,RMS vibration,undetermined — review sensor data,"Bearing: b2_ch1
+Snapshot index: 711
+Anomaly score: 0.0685
+RUL score: 0.2531 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Dominant frequency (Hz): -1.1195 (↓ toward normal)
+  - Shape factor: -0.8381 (↓ toward normal)
+  - RMS vibration: -0.6294 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0107 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0043 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0042 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: undetermined — review sensor data"
+b2_ch1,718,0.053511996241495274,0.19002987444400787,Dominant frequency (Hz),Spectral bandwidth (Hz),RMS vibration,undetermined — review sensor data,"Bearing: b2_ch1
+Snapshot index: 718
+Anomaly score: 0.0535
+RUL score: 0.1900 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Dominant frequency (Hz): -0.8842 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.6091 (↓ toward normal)
+  - RMS vibration: -0.4819 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0089 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0044 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0039 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: undetermined — review sensor data"
+b2_ch1,720,0.004577256152823006,0.1867760717868805,Peak-to-peak amplitude,Spectral bandwidth (Hz),BSF band energy (ball fault),rolling element (ball) fault,"Bearing: b2_ch1
+Snapshot index: 720
+Anomaly score: 0.0046
+RUL score: 0.1868 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Peak-to-peak amplitude: -0.7561 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.6724 (↓ toward normal)
+  - BSF band energy (ball fault): -0.6393 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0072 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0032 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0030 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: rolling element (ball) fault"
+b2_ch1,723,0.04804369740276648,0.1827242225408554,Crest factor,RMS vibration,Spectral bandwidth (Hz),impulsive fault (early stage),"Bearing: b2_ch1
+Snapshot index: 723
+Anomaly score: 0.0480
+RUL score: 0.1827 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Crest factor: -0.7319 (↓ toward normal)
+  - RMS vibration: -0.6846 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.6530 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0116 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0049 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0048 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: impulsive fault (early stage)"
+b2_ch1,726,0.0028751518924170494,0.1814330369234085,Dominant frequency (Hz),RMS vibration,High-freq energy ratio,undetermined — review sensor data,"Bearing: b2_ch1
+Snapshot index: 726
+Anomaly score: 0.0029
+RUL score: 0.1814 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Dominant frequency (Hz): -0.9646 (↓ toward normal)
+  - RMS vibration: -0.6654 (↓ toward normal)
+  - High-freq energy ratio: -0.6405 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0112 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0046 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0043 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: undetermined — review sensor data"
+b2_ch1,732,0.02298032010393003,0.1785762757062912,RMS vibration,Peak-to-peak amplitude,Spectral bandwidth (Hz),undetermined — review sensor data,"Bearing: b2_ch1
+Snapshot index: 732
+Anomaly score: 0.0230
+RUL score: 0.1786 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - RMS vibration: -0.7066 (↓ toward normal)
+  - Peak-to-peak amplitude: -0.6499 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.6434 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0085 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0038 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0033 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: undetermined — review sensor data"
+b2_ch1,740,0.012478820495574583,0.18263235688209534,Dominant frequency (Hz),High-freq energy ratio,Spectral bandwidth (Hz),undetermined — review sensor data,"Bearing: b2_ch1
+Snapshot index: 740
+Anomaly score: 0.0125
+RUL score: 0.1826 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Dominant frequency (Hz): -0.9738 (↓ toward normal)
+  - High-freq energy ratio: -0.6328 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.6285 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0099 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0049 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0043 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: undetermined — review sensor data"
+b2_ch1,744,0.034220343320418234,0.17911498248577118,Shape factor,Dominant frequency (Hz),RMS vibration,undetermined — review sensor data,"Bearing: b2_ch1
+Snapshot index: 744
+Anomaly score: 0.0342
+RUL score: 0.1791 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Shape factor: -0.9689 (↓ toward normal)
+  - Dominant frequency (Hz): -0.9082 (↓ toward normal)
+  - RMS vibration: -0.6860 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0130 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0068 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0060 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: undetermined — review sensor data"
+b2_ch1,746,0.003954774449439147,0.17779642343521118,Dominant frequency (Hz),Spectral bandwidth (Hz),RMS vibration,undetermined — review sensor data,"Bearing: b2_ch1
+Snapshot index: 746
+Anomaly score: 0.0040
+RUL score: 0.1778 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Dominant frequency (Hz): -1.0329 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.6980 (↓ toward normal)
+  - RMS vibration: -0.6863 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0066 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0035 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0032 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: undetermined — review sensor data"
+b2_ch1,748,0.003147591410814221,0.17547191679477692,Spectral bandwidth (Hz),RMS vibration,High-freq energy ratio,undetermined — review sensor data,"Bearing: b2_ch1
+Snapshot index: 748
+Anomaly score: 0.0031
+RUL score: 0.1755 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral bandwidth (Hz): -0.7946 (↓ toward normal)
+  - RMS vibration: -0.7007 (↓ toward normal)
+  - High-freq energy ratio: -0.6851 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0108 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0053 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0051 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: undetermined — review sensor data"
+b2_ch1,754,0.017007608165868437,0.17512577772140503,Shape factor,Spectral bandwidth (Hz),High-freq energy ratio,undetermined — review sensor data,"Bearing: b2_ch1
+Snapshot index: 754
+Anomaly score: 0.0170
+RUL score: 0.1751 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Shape factor: -0.7708 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.7645 (↓ toward normal)
+  - High-freq energy ratio: -0.6496 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0130 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0072 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0071 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: undetermined — review sensor data"
+b2_ch1,758,0.042508551418644624,0.17954261600971222,Dominant frequency (Hz),RMS vibration,Peak-to-peak amplitude,undetermined — review sensor data,"Bearing: b2_ch1
+Snapshot index: 758
+Anomaly score: 0.0425
+RUL score: 0.1795 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Dominant frequency (Hz): -0.9201 (↓ toward normal)
+  - RMS vibration: -0.7659 (↓ toward normal)
+  - Peak-to-peak amplitude: -0.7258 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0124 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0076 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0071 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: undetermined — review sensor data"
+b2_ch1,759,0.002107378965884754,0.17739035189151764,Dominant frequency (Hz),RMS vibration,Spectral centroid (Hz),undetermined — review sensor data,"Bearing: b2_ch1
+Snapshot index: 759
+Anomaly score: 0.0021
+RUL score: 0.1774 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Dominant frequency (Hz): -1.0998 (↓ toward normal)
+  - RMS vibration: -0.8540 (↓ toward normal)
+  - Spectral centroid (Hz): -0.5604 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0077 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0051 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0047 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: undetermined — review sensor data"
+b2_ch1,761,0.017654189307181323,0.18336890637874603,High-freq energy ratio,Spectral bandwidth (Hz),RMS vibration,undetermined — review sensor data,"Bearing: b2_ch1
+Snapshot index: 761
+Anomaly score: 0.0177
+RUL score: 0.1834 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - High-freq energy ratio: -0.7532 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.6921 (↓ toward normal)
+  - RMS vibration: -0.6794 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0077 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0055 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0050 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: undetermined — review sensor data"
+b2_ch1,776,0.003629596672190538,0.17717266082763672,Shape factor,RMS vibration,Spectral bandwidth (Hz),undetermined — review sensor data,"Bearing: b2_ch1
+Snapshot index: 776
+Anomaly score: 0.0036
+RUL score: 0.1772 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Shape factor: -0.9529 (↓ toward normal)
+  - RMS vibration: -0.7543 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.7308 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0068 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0058 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0047 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: undetermined — review sensor data"
+b2_ch1,779,0.006686492106799946,0.17782722413539886,RMS vibration,High-freq energy ratio,Spectral entropy,distributed damage (multiple fault modes),"Bearing: b2_ch1
+Snapshot index: 779
+Anomaly score: 0.0067
+RUL score: 0.1778 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - RMS vibration: -0.7344 (↓ toward normal)
+  - High-freq energy ratio: -0.7096 (↓ toward normal)
+  - Spectral entropy: -0.6816 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0080 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0070 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0055 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b2_ch1,781,0.014101482529800036,0.17571042478084564,Shape factor,Spectral bandwidth (Hz),High-freq energy ratio,undetermined — review sensor data,"Bearing: b2_ch1
+Snapshot index: 781
+Anomaly score: 0.0141
+RUL score: 0.1757 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Shape factor: -1.0025 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.7481 (↓ toward normal)
+  - High-freq energy ratio: -0.6958 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0098 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0088 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0066 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: undetermined — review sensor data"
+b2_ch1,783,0.0019174386775694385,0.17528881132602692,Dominant frequency (Hz),RMS vibration,High-freq energy ratio,undetermined — review sensor data,"Bearing: b2_ch1
+Snapshot index: 783
+Anomaly score: 0.0019
+RUL score: 0.1753 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Dominant frequency (Hz): -1.0545 (↓ toward normal)
+  - RMS vibration: -0.8459 (↓ toward normal)
+  - High-freq energy ratio: -0.7151 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0100 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0091 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0066 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: undetermined — review sensor data"
+b2_ch1,786,0.016651727125280513,0.17497052252292633,Dominant frequency (Hz),RMS vibration,Spectral bandwidth (Hz),undetermined — review sensor data,"Bearing: b2_ch1
+Snapshot index: 786
+Anomaly score: 0.0167
+RUL score: 0.1750 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Dominant frequency (Hz): -1.0055 (↓ toward normal)
+  - RMS vibration: -0.7971 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.6618 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0058 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0056 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0041 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: undetermined — review sensor data"
+b2_ch1,788,0.06956972025256114,0.17375260591506958,Shape factor,Dominant frequency (Hz),RMS vibration,undetermined — review sensor data,"Bearing: b2_ch1
+Snapshot index: 788
+Anomaly score: 0.0696
+RUL score: 0.1738 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Shape factor: -0.8678 (↓ toward normal)
+  - Dominant frequency (Hz): -0.8645 (↓ toward normal)
+  - RMS vibration: -0.6707 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0068 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0067 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0049 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: undetermined — review sensor data"
+b2_ch1,793,0.009305361773550902,0.17428599298000336,RMS vibration,Spectral bandwidth (Hz),High-freq energy ratio,undetermined — review sensor data,"Bearing: b2_ch1
+Snapshot index: 793
+Anomaly score: 0.0093
+RUL score: 0.1743 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - RMS vibration: -0.6719 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.6555 (↓ toward normal)
+  - High-freq energy ratio: -0.6490 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0079 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0078 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0056 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: undetermined — review sensor data"
+b2_ch1,795,0.03301808350819624,0.17404472827911377,RMS vibration,Spectral bandwidth (Hz),High-freq energy ratio,undetermined — review sensor data,"Bearing: b2_ch1
+Snapshot index: 795
+Anomaly score: 0.0330
+RUL score: 0.1740 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - RMS vibration: -0.7696 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.6696 (↓ toward normal)
+  - High-freq energy ratio: -0.6568 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0064 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0063 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0046 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: undetermined — review sensor data"
+b2_ch1,796,0.004954513525322057,0.17263366281986237,Spectral bandwidth (Hz),Spectral entropy,High-freq energy ratio,distributed damage (multiple fault modes),"Bearing: b2_ch1
+Snapshot index: 796
+Anomaly score: 0.0050
+RUL score: 0.1726 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral bandwidth (Hz): -0.7681 (↓ toward normal)
+  - Spectral entropy: -0.7610 (↓ toward normal)
+  - High-freq energy ratio: -0.6467 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0067 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0066 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0046 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b2_ch1,797,0.0025571700252084995,0.1744414120912552,Spectral entropy,RMS vibration,BPFI band energy (inner race),distributed damage (multiple fault modes),"Bearing: b2_ch1
+Snapshot index: 797
+Anomaly score: 0.0026
+RUL score: 0.1744 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.7593 (↓ toward normal)
+  - RMS vibration: -0.7477 (↓ toward normal)
+  - BPFI band energy (inner race): -0.6540 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral centroid (Hz): -0.0091 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0090 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0063 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b2_ch1,799,0.008347080645467964,0.1740875244140625,Spectral entropy,Spectral bandwidth (Hz),High-freq energy ratio,distributed damage (multiple fault modes),"Bearing: b2_ch1
+Snapshot index: 799
+Anomaly score: 0.0083
+RUL score: 0.1741 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.7737 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.7333 (↓ toward normal)
+  - High-freq energy ratio: -0.6938 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral centroid (Hz): -0.0077 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0075 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0053 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b2_ch1,803,0.030316384525649664,0.1738627552986145,Shape factor,Spectral entropy,Spectral bandwidth (Hz),distributed damage (multiple fault modes),"Bearing: b2_ch1
+Snapshot index: 803
+Anomaly score: 0.0303
+RUL score: 0.1739 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Shape factor: -0.8985 (↓ toward normal)
+  - Spectral entropy: -0.7266 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.7240 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral centroid (Hz): -0.0066 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0063 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0045 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b2_ch1,805,0.02074890146393904,0.17415297031402588,High-freq energy ratio,Spectral entropy,Spectral bandwidth (Hz),distributed damage (multiple fault modes),"Bearing: b2_ch1
+Snapshot index: 805
+Anomaly score: 0.0207
+RUL score: 0.1742 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - High-freq energy ratio: -0.7008 (↓ toward normal)
+  - Spectral entropy: -0.6967 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.6935 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral centroid (Hz): -0.0056 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0052 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0038 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b2_ch1,812,0.03815180031363574,0.1747264862060547,RMS vibration,High-freq energy ratio,Spectral bandwidth (Hz),undetermined — review sensor data,"Bearing: b2_ch1
+Snapshot index: 812
+Anomaly score: 0.0382
+RUL score: 0.1747 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - RMS vibration: -0.6973 (↓ toward normal)
+  - High-freq energy ratio: -0.6538 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.6320 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral centroid (Hz): -0.0061 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0059 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0045 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: undetermined — review sensor data"
+b2_ch1,814,0.012628677613754968,0.17607365548610687,Spectral entropy,High-freq energy ratio,RMS vibration,distributed damage (multiple fault modes),"Bearing: b2_ch1
+Snapshot index: 814
+Anomaly score: 0.0126
+RUL score: 0.1761 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.7447 (↓ toward normal)
+  - High-freq energy ratio: -0.7297 (↓ toward normal)
+  - RMS vibration: -0.7119 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral centroid (Hz): -0.0058 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0054 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0042 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b2_ch1,819,0.017665148645523154,0.1803009808063507,Dominant frequency (Hz),RMS vibration,Spectral bandwidth (Hz),undetermined — review sensor data,"Bearing: b2_ch1
+Snapshot index: 819
+Anomaly score: 0.0177
+RUL score: 0.1803 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Dominant frequency (Hz): -1.3554 (↓ toward normal)
+  - RMS vibration: -0.7680 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.6513 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral centroid (Hz): -0.0054 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0051 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0039 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: undetermined — review sensor data"
+b2_ch1,820,0.024790544304426954,0.18074551224708557,High-freq energy ratio,RMS vibration,Spectral entropy,distributed damage (multiple fault modes),"Bearing: b2_ch1
+Snapshot index: 820
+Anomaly score: 0.0248
+RUL score: 0.1807 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - High-freq energy ratio: -0.7782 (↓ toward normal)
+  - RMS vibration: -0.7617 (↓ toward normal)
+  - Spectral entropy: -0.6831 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral centroid (Hz): -0.0076 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0072 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0055 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b2_ch1,822,0.05595070678573977,0.17535299062728882,Shape factor,RMS vibration,Spectral bandwidth (Hz),undetermined — review sensor data,"Bearing: b2_ch1
+Snapshot index: 822
+Anomaly score: 0.0560
+RUL score: 0.1754 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Shape factor: -0.8253 (↓ toward normal)
+  - RMS vibration: -0.6515 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.6488 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral centroid (Hz): -0.0071 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0066 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0050 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: undetermined — review sensor data"
+b2_ch1,826,0.034757175816416686,0.17323553562164307,BPFI band energy (inner race),RMS vibration,Spectral bandwidth (Hz),inner race fault,"Bearing: b2_ch1
+Snapshot index: 826
+Anomaly score: 0.0348
+RUL score: 0.1732 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - BPFI band energy (inner race): -0.7372 (↓ toward normal)
+  - RMS vibration: -0.7115 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.6492 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral centroid (Hz): -0.0084 (↓ reduces RUL)
+  - Spectral bandwidth (Hz): -0.0081 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0056 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: inner race fault"
+b2_ch1,828,0.014400549253791639,0.17093445360660553,Spectral bandwidth (Hz),Spectral entropy,High-freq energy ratio,distributed damage (multiple fault modes),"Bearing: b2_ch1
+Snapshot index: 828
+Anomaly score: 0.0144
+RUL score: 0.1709 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral bandwidth (Hz): -0.7299 (↓ toward normal)
+  - Spectral entropy: -0.7204 (↓ toward normal)
+  - High-freq energy ratio: -0.7190 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0062 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0062 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0042 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b2_ch1,832,0.11101202197488103,0.17043650150299072,Peak-to-peak amplitude,Impulse factor,Crest factor,impulsive fault (early stage),"Bearing: b2_ch1
+Snapshot index: 832
+Anomaly score: 0.1110
+RUL score: 0.1704 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Peak-to-peak amplitude: -0.7732 (↓ toward normal)
+  - Impulse factor: -0.7019 (↓ toward normal)
+  - Crest factor: -0.6525 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0048 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0048 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0031 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: impulsive fault (early stage)"
+b2_ch1,834,0.033046515095984996,0.16924209892749786,RMS vibration,Spectral bandwidth (Hz),Spectral entropy,distributed damage (multiple fault modes),"Bearing: b2_ch1
+Snapshot index: 834
+Anomaly score: 0.0330
+RUL score: 0.1692 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - RMS vibration: -0.6890 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.6422 (↓ toward normal)
+  - Spectral entropy: -0.6357 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0054 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0052 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0033 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b2_ch1,836,0.007260281734775442,0.16890200972557068,RMS vibration,Spectral bandwidth (Hz),Shape factor,undetermined — review sensor data,"Bearing: b2_ch1
+Snapshot index: 836
+Anomaly score: 0.0073
+RUL score: 0.1689 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - RMS vibration: -0.7667 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.7234 (↓ toward normal)
+  - Shape factor: -0.6035 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0063 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0056 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0036 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: undetermined — review sensor data"
+b2_ch1,837,0.018138526896679052,0.169246643781662,RMS vibration,Spectral entropy,Spectral bandwidth (Hz),distributed damage (multiple fault modes),"Bearing: b2_ch1
+Snapshot index: 837
+Anomaly score: 0.0181
+RUL score: 0.1692 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - RMS vibration: -0.7392 (↓ toward normal)
+  - Spectral entropy: -0.6955 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.6714 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0079 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0073 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0048 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b2_ch1,838,0.00979642919890722,0.16761018335819244,RMS vibration,Spectral bandwidth (Hz),High-freq energy ratio,undetermined — review sensor data,"Bearing: b2_ch1
+Snapshot index: 838
+Anomaly score: 0.0098
+RUL score: 0.1676 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - RMS vibration: -0.7639 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.6872 (↓ toward normal)
+  - High-freq energy ratio: -0.6614 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0062 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0055 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0037 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: undetermined — review sensor data"
+b2_ch1,840,0.004711753588538481,0.16701458394527435,RMS vibration,Spectral bandwidth (Hz),High-freq energy ratio,undetermined — review sensor data,"Bearing: b2_ch1
+Snapshot index: 840
+Anomaly score: 0.0047
+RUL score: 0.1670 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - RMS vibration: -0.7660 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.7537 (↓ toward normal)
+  - High-freq energy ratio: -0.6884 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0044 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0038 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0025 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: undetermined — review sensor data"
+b2_ch1,843,0.011900707972189117,0.16763906180858612,Spectral bandwidth (Hz),RMS vibration,High-freq energy ratio,undetermined — review sensor data,"Bearing: b2_ch1
+Snapshot index: 843
+Anomaly score: 0.0119
+RUL score: 0.1676 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral bandwidth (Hz): -0.7367 (↓ toward normal)
+  - RMS vibration: -0.7257 (↓ toward normal)
+  - High-freq energy ratio: -0.7160 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0080 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0067 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0044 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: undetermined — review sensor data"
+b2_ch1,845,0.007888217696331079,0.16728438436985016,Dominant frequency (Hz),RMS vibration,Spectral bandwidth (Hz),undetermined — review sensor data,"Bearing: b2_ch1
+Snapshot index: 845
+Anomaly score: 0.0079
+RUL score: 0.1673 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Dominant frequency (Hz): -1.0212 (↓ toward normal)
+  - RMS vibration: -0.8484 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.7067 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0139 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0119 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0081 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: undetermined — review sensor data"
+b2_ch1,846,0.0262564438274574,0.16662469506263733,Dominant frequency (Hz),RMS vibration,High-freq energy ratio,undetermined — review sensor data,"Bearing: b2_ch1
+Snapshot index: 846
+Anomaly score: 0.0263
+RUL score: 0.1666 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Dominant frequency (Hz): -0.9476 (↓ toward normal)
+  - RMS vibration: -0.7545 (↓ toward normal)
+  - High-freq energy ratio: -0.6703 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0084 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0065 (↓ reduces RUL)
+  - High-freq energy ratio: -0.0044 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: undetermined — review sensor data"

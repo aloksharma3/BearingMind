@@ -1,0 +1,901 @@
+bearing_id,snapshot_idx,anomaly_score,rul_score,top_feature_1,top_feature_2,top_feature_3,probable_fault,rca_context
+b3_ch1,0,0.055129792075041095,1.0,Dominant frequency (Hz),Kurtosis,Skewness,impulsive fault (spalling / cracking),"Bearing: b3_ch1
+Snapshot index: 0
+Anomaly score: 0.0551
+RUL score: 1.0000 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Dominant frequency (Hz): -1.1752 (↓ toward normal)
+  - Kurtosis: -1.0465 (↓ toward normal)
+  - Skewness: -0.6980 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - RMS vibration: -0.0059 (↓ reduces RUL)
+  - Shape factor: -0.0012 (↓ reduces RUL)
+  - Spectral entropy: -0.0010 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: impulsive fault (spalling / cracking)"
+b3_ch1,60,0.009774925750158592,0.884398877620697,Kurtosis,Peak-to-peak amplitude,Margin factor,impulsive fault (spalling / cracking),"Bearing: b3_ch1
+Snapshot index: 60
+Anomaly score: 0.0098
+RUL score: 0.8844 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Kurtosis: -0.8801 (↓ toward normal)
+  - Peak-to-peak amplitude: -0.6417 (↓ toward normal)
+  - Margin factor: -0.6298 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Crest factor: +0.0000 (↑ increases RUL)
+  - RMS vibration: +0.0000 (↑ increases RUL)
+  - Margin factor: +0.0000 (↑ increases RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: impulsive fault (spalling / cracking)"
+b3_ch1,91,0.029901323629448306,0.8833357691764832,Impulse factor,Crest factor,Margin factor,impulsive fault (early stage),"Bearing: b3_ch1
+Snapshot index: 91
+Anomaly score: 0.0299
+RUL score: 0.8833 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Impulse factor: -0.8738 (↓ toward normal)
+  - Crest factor: -0.8244 (↓ toward normal)
+  - Margin factor: -0.8086 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - BPFO band energy (outer race): +0.0000 (↑ increases RUL)
+  - Crest factor: +0.0000 (↑ increases RUL)
+  - RMS vibration: -0.0000 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: impulsive fault (early stage)"
+b3_ch1,128,0.01901583860133138,0.8786070346832275,Kurtosis,Peak-to-peak amplitude,Shape factor,impulsive fault (spalling / cracking),"Bearing: b3_ch1
+Snapshot index: 128
+Anomaly score: 0.0190
+RUL score: 0.8786 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Kurtosis: -1.4773 (↓ toward normal)
+  - Peak-to-peak amplitude: -0.6409 (↓ toward normal)
+  - Shape factor: -0.5933 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - RMS vibration: -0.0001 (↓ reduces RUL)
+  - Skewness: +0.0000 (↑ increases RUL)
+  - Spectral bandwidth (Hz): -0.0000 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: impulsive fault (spalling / cracking)"
+b3_ch1,145,0.03271645502879139,0.876062273979187,Kurtosis,Spectral entropy,Spectral bandwidth (Hz),impulsive fault (spalling / cracking),"Bearing: b3_ch1
+Snapshot index: 145
+Anomaly score: 0.0327
+RUL score: 0.8761 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Kurtosis: -0.9609 (↓ toward normal)
+  - Spectral entropy: -0.6772 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.5926 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral bandwidth (Hz): -0.0001 (↓ reduces RUL)
+  - Spectral entropy: -0.0001 (↓ reduces RUL)
+  - RMS vibration: -0.0000 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: impulsive fault (spalling / cracking)"
+b3_ch1,537,0.03085682167163284,0.510574221611023,Kurtosis,Impulse factor,Margin factor,impulsive fault (spalling / cracking),"Bearing: b3_ch1
+Snapshot index: 537
+Anomaly score: 0.0309
+RUL score: 0.5106 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Kurtosis: -1.2719 (↓ toward normal)
+  - Impulse factor: -0.8700 (↓ toward normal)
+  - Margin factor: -0.7212 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - RMS vibration: -0.0071 (↓ reduces RUL)
+  - Crest factor: -0.0010 (↓ reduces RUL)
+  - Margin factor: -0.0009 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: impulsive fault (spalling / cracking)"
+b3_ch1,573,0.01371572399544252,0.3493979275226593,Spectral entropy,Spectral bandwidth (Hz),Dominant frequency (Hz),distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 573
+Anomaly score: 0.0137
+RUL score: 0.3494 (NORMAL)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.0250 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.5990 (↓ toward normal)
+  - Dominant frequency (Hz): -0.5596 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - RMS vibration: -0.0080 (↓ reduces RUL)
+  - Crest factor: -0.0015 (↓ reduces RUL)
+  - Margin factor: -0.0014 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,762,0.012047306481883902,0.19417333602905273,Spectral entropy,Spectral bandwidth (Hz),Spectral centroid (Hz),distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 762
+Anomaly score: 0.0120
+RUL score: 0.1942 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.1043 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.8180 (↓ toward normal)
+  - Spectral centroid (Hz): -0.6246 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Shape factor: -0.0052 (↓ reduces RUL)
+  - RMS vibration: -0.0051 (↓ reduces RUL)
+  - Spectral entropy: -0.0027 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,799,0.0006407863263038216,0.17121674120426178,Spectral entropy,Spectral centroid (Hz),Dominant frequency (Hz),distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 799
+Anomaly score: 0.0006
+RUL score: 0.1712 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.1769 (↓ toward normal)
+  - Spectral centroid (Hz): -0.5197 (↓ toward normal)
+  - Dominant frequency (Hz): -0.5027 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0032 (↓ reduces RUL)
+  - RMS vibration: -0.0022 (↓ reduces RUL)
+  - Shape factor: -0.0021 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,814,0.014597233457333214,0.17150059342384338,Spectral entropy,BSF band energy (ball fault),Spectral centroid (Hz),distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 814
+Anomaly score: 0.0146
+RUL score: 0.1715 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.1505 (↓ toward normal)
+  - BSF band energy (ball fault): -0.6935 (↓ toward normal)
+  - Spectral centroid (Hz): -0.6547 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Shape factor: -0.0070 (↓ reduces RUL)
+  - Spectral entropy: -0.0066 (↓ reduces RUL)
+  - RMS vibration: -0.0045 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,822,0.03155019212859267,0.1704113483428955,Spectral entropy,Spectral centroid (Hz),Shape factor,distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 822
+Anomaly score: 0.0316
+RUL score: 0.1704 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.0920 (↓ toward normal)
+  - Spectral centroid (Hz): -0.6075 (↓ toward normal)
+  - Shape factor: -0.4288 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0118 (↓ reduces RUL)
+  - RMS vibration: -0.0101 (↓ reduces RUL)
+  - Shape factor: -0.0095 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,834,0.05107806708439344,0.15934523940086365,Spectral entropy,BPFI band energy (inner race),Spectral centroid (Hz),distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 834
+Anomaly score: 0.0511
+RUL score: 0.1593 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.1332 (↓ toward normal)
+  - BPFI band energy (inner race): -0.6095 (↓ toward normal)
+  - Spectral centroid (Hz): -0.5665 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0010 (↓ reduces RUL)
+  - Shape factor: -0.0006 (↓ reduces RUL)
+  - BPFO band energy (outer race): -0.0003 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,835,0.005234490792032864,0.1585981547832489,Spectral entropy,Spectral centroid (Hz),High-freq energy ratio,distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 835
+Anomaly score: 0.0052
+RUL score: 0.1586 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.1888 (↓ toward normal)
+  - Spectral centroid (Hz): -0.6611 (↓ toward normal)
+  - High-freq energy ratio: -0.6374 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0073 (↓ reduces RUL)
+  - Shape factor: -0.0053 (↓ reduces RUL)
+  - BPFO band energy (outer race): -0.0040 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,840,0.029050615341859043,0.1588248908519745,Spectral entropy,Spectral centroid (Hz),High-freq energy ratio,distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 840
+Anomaly score: 0.0291
+RUL score: 0.1588 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.0298 (↓ toward normal)
+  - Spectral centroid (Hz): -0.5592 (↓ toward normal)
+  - High-freq energy ratio: -0.5254 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0012 (↓ reduces RUL)
+  - Shape factor: -0.0007 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0005 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,848,0.008780759459293797,0.15663136541843414,Spectral entropy,Spectral centroid (Hz),High-freq energy ratio,distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 848
+Anomaly score: 0.0088
+RUL score: 0.1566 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.9578 (↓ toward normal)
+  - Spectral centroid (Hz): -0.6576 (↓ toward normal)
+  - High-freq energy ratio: -0.6258 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0027 (↓ reduces RUL)
+  - Shape factor: -0.0025 (↓ reduces RUL)
+  - RMS vibration: -0.0013 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,852,0.009404934545446664,0.15716052055358887,Spectral entropy,Spectral centroid (Hz),High-freq energy ratio,distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 852
+Anomaly score: 0.0094
+RUL score: 0.1572 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.1537 (↓ toward normal)
+  - Spectral centroid (Hz): -0.6595 (↓ toward normal)
+  - High-freq energy ratio: -0.6087 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0059 (↓ reduces RUL)
+  - Shape factor: -0.0054 (↓ reduces RUL)
+  - BPFO band energy (outer race): -0.0020 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,855,0.029398595908264546,0.15594898164272308,Spectral entropy,BSF band energy (ball fault),High-freq energy ratio,distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 855
+Anomaly score: 0.0294
+RUL score: 0.1559 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.1370 (↓ toward normal)
+  - BSF band energy (ball fault): -0.6330 (↓ toward normal)
+  - High-freq energy ratio: -0.5645 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0010 (↓ reduces RUL)
+  - Shape factor: -0.0006 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0003 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,856,0.06335499646425091,0.15698722004890442,Spectral entropy,BSF band energy (ball fault),High-freq energy ratio,distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 856
+Anomaly score: 0.0634
+RUL score: 0.1570 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.9828 (↓ toward normal)
+  - BSF band energy (ball fault): -0.5787 (↓ toward normal)
+  - High-freq energy ratio: -0.5700 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0017 (↓ reduces RUL)
+  - Shape factor: -0.0010 (↓ reduces RUL)
+  - BPFO band energy (outer race): -0.0005 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,857,0.015080501234195576,0.15614087879657745,Spectral entropy,High-freq energy ratio,Spectral centroid (Hz),distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 857
+Anomaly score: 0.0151
+RUL score: 0.1561 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.0580 (↓ toward normal)
+  - High-freq energy ratio: -0.6592 (↓ toward normal)
+  - Spectral centroid (Hz): -0.6236 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0027 (↓ reduces RUL)
+  - Shape factor: -0.0019 (↓ reduces RUL)
+  - BPFO band energy (outer race): -0.0010 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,859,0.015778584050549993,0.15503470599651337,Spectral entropy,High-freq energy ratio,Spectral centroid (Hz),distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 859
+Anomaly score: 0.0158
+RUL score: 0.1550 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.1323 (↓ toward normal)
+  - High-freq energy ratio: -0.6430 (↓ toward normal)
+  - Spectral centroid (Hz): -0.6292 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0007 (↓ reduces RUL)
+  - Shape factor: -0.0003 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0003 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,861,0.018676296432705408,0.15563175082206726,Spectral entropy,High-freq energy ratio,Spectral centroid (Hz),distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 861
+Anomaly score: 0.0187
+RUL score: 0.1556 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.1057 (↓ toward normal)
+  - High-freq energy ratio: -0.6560 (↓ toward normal)
+  - Spectral centroid (Hz): -0.6051 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0009 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0004 (↓ reduces RUL)
+  - Shape factor: -0.0004 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,862,0.05337336296145789,0.15641239285469055,Spectral entropy,Spectral bandwidth (Hz),BSF band energy (ball fault),distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 862
+Anomaly score: 0.0534
+RUL score: 0.1564 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.0281 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.7150 (↓ toward normal)
+  - BSF band energy (ball fault): -0.6173 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0011 (↓ reduces RUL)
+  - Shape factor: -0.0005 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0004 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,864,0.018924964857726878,0.15559926629066467,Spectral entropy,High-freq energy ratio,Spectral centroid (Hz),distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 864
+Anomaly score: 0.0189
+RUL score: 0.1556 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.1848 (↓ toward normal)
+  - High-freq energy ratio: -0.6412 (↓ toward normal)
+  - Spectral centroid (Hz): -0.6133 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0021 (↓ reduces RUL)
+  - Shape factor: -0.0014 (↓ reduces RUL)
+  - BPFO band energy (outer race): -0.0007 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,867,0.053361130039202176,0.15611739456653595,Spectral entropy,High-freq energy ratio,Spectral centroid (Hz),distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 867
+Anomaly score: 0.0534
+RUL score: 0.1561 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.0160 (↓ toward normal)
+  - High-freq energy ratio: -0.6220 (↓ toward normal)
+  - Spectral centroid (Hz): -0.5559 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0010 (↓ reduces RUL)
+  - Shape factor: -0.0006 (↓ reduces RUL)
+  - BPFO band energy (outer race): -0.0004 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,868,0.019358218899200086,0.15555834770202637,Spectral entropy,High-freq energy ratio,Spectral centroid (Hz),distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 868
+Anomaly score: 0.0194
+RUL score: 0.1556 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.2658 (↓ toward normal)
+  - High-freq energy ratio: -0.6551 (↓ toward normal)
+  - Spectral centroid (Hz): -0.6517 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0006 (↓ reduces RUL)
+  - Shape factor: -0.0003 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0002 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,869,0.008842082562915965,0.15527001023292542,Spectral entropy,Spectral centroid (Hz),High-freq energy ratio,distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 869
+Anomaly score: 0.0088
+RUL score: 0.1553 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.1941 (↓ toward normal)
+  - Spectral centroid (Hz): -0.6926 (↓ toward normal)
+  - High-freq energy ratio: -0.6425 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0015 (↓ reduces RUL)
+  - Shape factor: -0.0009 (↓ reduces RUL)
+  - BPFO band energy (outer race): -0.0005 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,870,0.030007158254490185,0.15584339201450348,Spectral entropy,Spectral bandwidth (Hz),Spectral centroid (Hz),distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 870
+Anomaly score: 0.0300
+RUL score: 0.1558 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.1334 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.8132 (↓ toward normal)
+  - Spectral centroid (Hz): -0.6584 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0462 (↓ reduces RUL)
+  - Shape factor: -0.0351 (↓ reduces RUL)
+  - BPFO band energy (outer race): -0.0172 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,871,0.013435550242154592,0.1554655283689499,Spectral entropy,Spectral centroid (Hz),Spectral bandwidth (Hz),distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 871
+Anomaly score: 0.0134
+RUL score: 0.1555 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.2217 (↓ toward normal)
+  - Spectral centroid (Hz): -0.6744 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.6530 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0007 (↓ reduces RUL)
+  - Shape factor: -0.0004 (↓ reduces RUL)
+  - BPFO band energy (outer race): -0.0002 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,872,0.0306987343794054,0.1550881266593933,Spectral entropy,Spectral bandwidth (Hz),High-freq energy ratio,distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 872
+Anomaly score: 0.0307
+RUL score: 0.1551 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.0740 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.6170 (↓ toward normal)
+  - High-freq energy ratio: -0.6103 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0029 (↓ reduces RUL)
+  - Shape factor: -0.0017 (↓ reduces RUL)
+  - RMS vibration: +0.0012 (↑ increases RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,873,0.04723548813566847,0.15550923347473145,Spectral entropy,High-freq energy ratio,Spectral centroid (Hz),distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 873
+Anomaly score: 0.0472
+RUL score: 0.1555 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.1182 (↓ toward normal)
+  - High-freq energy ratio: -0.6144 (↓ toward normal)
+  - Spectral centroid (Hz): -0.6114 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0017 (↓ reduces RUL)
+  - Shape factor: -0.0014 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0005 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,874,0.03660922055407012,0.1556512862443924,Spectral entropy,Spectral centroid (Hz),High-freq energy ratio,distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 874
+Anomaly score: 0.0366
+RUL score: 0.1557 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.0974 (↓ toward normal)
+  - Spectral centroid (Hz): -0.6656 (↓ toward normal)
+  - High-freq energy ratio: -0.6297 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0119 (↓ reduces RUL)
+  - Shape factor: -0.0097 (↓ reduces RUL)
+  - BPFO band energy (outer race): -0.0038 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,875,0.043970482154608304,0.15515963733196259,Spectral entropy,BSF band energy (ball fault),High-freq energy ratio,distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 875
+Anomaly score: 0.0440
+RUL score: 0.1552 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.0502 (↓ toward normal)
+  - BSF band energy (ball fault): -0.6261 (↓ toward normal)
+  - High-freq energy ratio: -0.6116 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0006 (↓ reduces RUL)
+  - Shape factor: -0.0004 (↓ reduces RUL)
+  - RMS vibration: +0.0002 (↑ increases RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,876,0.018645859336453574,0.15566720068454742,Spectral entropy,Spectral centroid (Hz),High-freq energy ratio,distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 876
+Anomaly score: 0.0186
+RUL score: 0.1557 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.1335 (↓ toward normal)
+  - Spectral centroid (Hz): -0.6282 (↓ toward normal)
+  - High-freq energy ratio: -0.6094 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0629 (↓ reduces RUL)
+  - Shape factor: -0.0360 (↓ reduces RUL)
+  - BPFO band energy (outer race): -0.0344 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,877,0.051356944242661906,0.15558607876300812,Spectral entropy,High-freq energy ratio,Spectral centroid (Hz),distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 877
+Anomaly score: 0.0514
+RUL score: 0.1556 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.9778 (↓ toward normal)
+  - High-freq energy ratio: -0.6117 (↓ toward normal)
+  - Spectral centroid (Hz): -0.5974 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0556 (↓ reduces RUL)
+  - Shape factor: -0.0415 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0151 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,878,0.06658181873923141,0.15548847615718842,Spectral entropy,Spectral bandwidth (Hz),High-freq energy ratio,distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 878
+Anomaly score: 0.0666
+RUL score: 0.1555 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.0361 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.8022 (↓ toward normal)
+  - High-freq energy ratio: -0.5766 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0004 (↓ reduces RUL)
+  - Shape factor: -0.0002 (↓ reduces RUL)
+  - RMS vibration: +0.0002 (↑ increases RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,879,0.03587359713024718,0.15499798953533173,Spectral entropy,High-freq energy ratio,Spectral centroid (Hz),distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 879
+Anomaly score: 0.0359
+RUL score: 0.1550 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.1086 (↓ toward normal)
+  - High-freq energy ratio: -0.6394 (↓ toward normal)
+  - Spectral centroid (Hz): -0.6057 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0152 (↓ reduces RUL)
+  - Shape factor: -0.0115 (↓ reduces RUL)
+  - BPFO band energy (outer race): -0.0081 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,880,0.05354734585972387,0.15524542331695557,Spectral entropy,BSF band energy (ball fault),RMS vibration,distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 880
+Anomaly score: 0.0535
+RUL score: 0.1552 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.9483 (↓ toward normal)
+  - BSF band energy (ball fault): -0.6263 (↓ toward normal)
+  - RMS vibration: -0.5844 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0005 (↓ reduces RUL)
+  - Shape factor: -0.0003 (↓ reduces RUL)
+  - BPFO band energy (outer race): -0.0002 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,881,0.06849825218611849,0.15585854649543762,Spectral entropy,BSF band energy (ball fault),High-freq energy ratio,distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 881
+Anomaly score: 0.0685
+RUL score: 0.1559 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.9993 (↓ toward normal)
+  - BSF band energy (ball fault): -0.6205 (↓ toward normal)
+  - High-freq energy ratio: -0.6037 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0008 (↓ reduces RUL)
+  - Shape factor: -0.0004 (↓ reduces RUL)
+  - RMS vibration: +0.0003 (↑ increases RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,882,0.028305314399839743,0.15598437190055847,Spectral entropy,Spectral bandwidth (Hz),Spectral centroid (Hz),distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 882
+Anomaly score: 0.0283
+RUL score: 0.1560 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.1968 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.7373 (↓ toward normal)
+  - Spectral centroid (Hz): -0.6653 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.1129 (↓ reduces RUL)
+  - Shape factor: -0.0700 (↓ reduces RUL)
+  - BPFO band energy (outer race): -0.0366 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,883,0.05854383413696074,0.15551801025867462,Spectral entropy,Spectral centroid (Hz),High-freq energy ratio,distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 883
+Anomaly score: 0.0585
+RUL score: 0.1555 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.9826 (↓ toward normal)
+  - Spectral centroid (Hz): -0.5939 (↓ toward normal)
+  - High-freq energy ratio: -0.5451 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0026 (↓ reduces RUL)
+  - Shape factor: -0.0020 (↓ reduces RUL)
+  - BPFO band energy (outer race): -0.0007 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,884,0.03758421595931705,0.1560630202293396,Spectral entropy,Spectral centroid (Hz),BSF band energy (ball fault),distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 884
+Anomaly score: 0.0376
+RUL score: 0.1561 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.1308 (↓ toward normal)
+  - Spectral centroid (Hz): -0.6361 (↓ toward normal)
+  - BSF band energy (ball fault): -0.6274 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0116 (↓ reduces RUL)
+  - Shape factor: -0.0074 (↓ reduces RUL)
+  - BPFO band energy (outer race): -0.0046 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,885,0.07716288883074873,0.15574273467063904,Spectral entropy,RMS vibration,Spectral centroid (Hz),distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 885
+Anomaly score: 0.0772
+RUL score: 0.1557 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.8486 (↓ toward normal)
+  - RMS vibration: -0.5711 (↓ toward normal)
+  - Spectral centroid (Hz): -0.5480 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0138 (↓ reduces RUL)
+  - Shape factor: -0.0102 (↓ reduces RUL)
+  - BPFO band energy (outer race): -0.0048 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,886,0.0380700908107654,0.1562822461128235,Spectral entropy,High-freq energy ratio,Spectral centroid (Hz),distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 886
+Anomaly score: 0.0381
+RUL score: 0.1563 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.0231 (↓ toward normal)
+  - High-freq energy ratio: -0.6063 (↓ toward normal)
+  - Spectral centroid (Hz): -0.5975 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0010 (↓ reduces RUL)
+  - Shape factor: -0.0005 (↓ reduces RUL)
+  - RMS vibration: +0.0002 (↑ increases RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,887,0.04944285587981678,0.15596649050712585,Spectral entropy,RMS vibration,High-freq energy ratio,distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 887
+Anomaly score: 0.0494
+RUL score: 0.1560 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -1.0729 (↓ toward normal)
+  - RMS vibration: -0.6416 (↓ toward normal)
+  - High-freq energy ratio: -0.6346 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0006 (↓ reduces RUL)
+  - Shape factor: -0.0003 (↓ reduces RUL)
+  - RMS vibration: +0.0001 (↑ increases RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,888,0.06785386277167438,0.1560276299715042,Spectral entropy,Spectral bandwidth (Hz),RMS vibration,distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 888
+Anomaly score: 0.0679
+RUL score: 0.1560 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.9873 (↓ toward normal)
+  - Spectral bandwidth (Hz): -0.7790 (↓ toward normal)
+  - RMS vibration: -0.5821 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0002 (↓ reduces RUL)
+  - RMS vibration: +0.0001 (↑ increases RUL)
+  - High-freq energy ratio: +0.0001 (↑ increases RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,889,0.08981413182169129,0.15546181797981262,Spectral entropy,RMS vibration,BPFI band energy (inner race),distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 889
+Anomaly score: 0.0898
+RUL score: 0.1555 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.8536 (↓ toward normal)
+  - RMS vibration: -0.5541 (↓ toward normal)
+  - BPFI band energy (inner race): -0.5345 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0003 (↓ reduces RUL)
+  - Shape factor: -0.0001 (↓ reduces RUL)
+  - RMS vibration: +0.0001 (↑ increases RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,890,0.06116043160044282,0.1566450446844101,Spectral entropy,High-freq energy ratio,Spectral centroid (Hz),distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 890
+Anomaly score: 0.0612
+RUL score: 0.1566 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.9937 (↓ toward normal)
+  - High-freq energy ratio: -0.6076 (↓ toward normal)
+  - Spectral centroid (Hz): -0.5730 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0009 (↓ reduces RUL)
+  - Shape factor: -0.0005 (↓ reduces RUL)
+  - Spectral centroid (Hz): -0.0002 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,891,0.05341066562558239,0.15636342763900757,Spectral entropy,RMS vibration,High-freq energy ratio,distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 891
+Anomaly score: 0.0534
+RUL score: 0.1564 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.9625 (↓ toward normal)
+  - RMS vibration: -0.6318 (↓ toward normal)
+  - High-freq energy ratio: -0.6027 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0012 (↓ reduces RUL)
+  - Shape factor: -0.0006 (↓ reduces RUL)
+  - BPFO band energy (outer race): -0.0003 (↓ reduces RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,892,0.059183161661371275,0.15608662366867065,Spectral entropy,RMS vibration,BSF band energy (ball fault),distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 892
+Anomaly score: 0.0592
+RUL score: 0.1561 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.9435 (↓ toward normal)
+  - RMS vibration: -0.6176 (↓ toward normal)
+  - BSF band energy (ball fault): -0.6087 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0009 (↓ reduces RUL)
+  - Shape factor: -0.0005 (↓ reduces RUL)
+  - RMS vibration: +0.0003 (↑ increases RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
+b3_ch1,893,0.06388040859420607,0.15630364418029785,Spectral entropy,BSF band energy (ball fault),RMS vibration,distributed damage (multiple fault modes),"Bearing: b3_ch1
+Snapshot index: 893
+Anomaly score: 0.0639
+RUL score: 0.1563 (WARNING)
+
+Top anomaly drivers (Isolation Forest SHAP):
+  - Spectral entropy: -0.9714 (↓ toward normal)
+  - BSF band energy (ball fault): -0.6125 (↓ toward normal)
+  - RMS vibration: -0.6097 (↓ toward normal)
+
+Top RUL drivers (LSTM SHAP):
+  - Spectral entropy: -0.0004 (↓ reduces RUL)
+  - Shape factor: -0.0002 (↓ reduces RUL)
+  - RMS vibration: +0.0002 (↑ increases RUL)
+
+CNN Autoencoder: no spectrogram image provided for this snapshot.
+
+Probable fault type: distributed damage (multiple fault modes)"
