@@ -135,8 +135,6 @@ industrial-ai-scada/
 └── README.md
 ```
 
-## Next steps (Week 2)
-
 - LangGraph multi-agent orchestration
 - MCP servers: equipment manual RAG, CMMS mock, weather API, parts inventory
 - RCA Agent using Claude API for plain-English diagnostic reports
