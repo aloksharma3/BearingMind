@@ -333,7 +333,9 @@ class BearingAnomalyDetector:
 # ── CLI ───────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
-    import sys
+    import sys 
+    from isolation_forest import BearingAnomalyDetector, SingleBearingDetector
+    from rul_lstm import BearingRULPredictor, SingleBearingRUL, LSTMRULModel
 
     if len(sys.argv) < 3:
         print("Usage: python isolation_forest.py <feature_matrix.csv> "

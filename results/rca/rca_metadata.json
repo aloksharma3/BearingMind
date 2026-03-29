@@ -1,0 +1,33 @@
+{
+  "bearing_id": "b2_ch1",
+  "fault_type": "inner race fault",
+  "urgency": "HIGH",
+  "generation_mode": "template",
+  "snapshot_index": 950,
+  "mcp_calls_made": [
+    {
+      "tool": "query_manual",
+      "query": "inner race BPFI fault diagnosis maintenance actions",
+      "timestamp": "2026-03-28T20:24:33.197999"
+    },
+    {
+      "tool": "query_manual",
+      "query": "bearing lubrication inner race spalling",
+      "timestamp": "2026-03-28T20:24:33.198999"
+    },
+    {
+      "tool": "get_maintenance_summary",
+      "asset_id": "b2_ch1",
+      "timestamp": "2026-03-28T20:24:33.199997"
+    }
+  ],
+  "recommended_actions": [
+    "Schedule emergency maintenance within 48 hours. Reduce operational load if possible until maintenance is performed.",
+    "Inspect lubrication condition \u2014 inadequate grease is the primary cause of inner race spalling (60% of cases). Check re-greasing log in CMMS.",
+    "Verify shaft alignment and interference fit \u2014 excessive preload accelerates inner race fatigue.",
+    "Order replacement bearing and schedule installation during next available maintenance window.",
+    "Verify replacement bearing RX-ZA2115 (3 in stock at Warehouse A \u2014 Shelf B3-07). Reserve one unit for this work order.",
+    "Document all findings and corrective actions in CMMS work order. Record baseline vibration after maintenance for future comparison."
+  ],
+  "timestamp": "2026-03-28T20:24:33.201001"
+}
