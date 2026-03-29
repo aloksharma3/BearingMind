@@ -4,7 +4,7 @@
 
 BearingMind detects bearing faults, predicts remaining useful life, explains *why* the fault is happening using SHAP, then queries equipment manuals and maintenance databases to produce a structured Root Cause Analysis report with specific parts, actions, and urgency levels.
 
-Built on the NASA IMS Bearing Dataset. Designed to demonstrate the architecture used in production systems at companies like Schneider Electric, Siemens, ABB, and GE Vernova.
+Designed to demonstrate the architecture used in production systems at companies like Schneider Electric, Siemens, ABB, and GE Vernova.
 
 ---
 
@@ -272,8 +272,8 @@ PARTS: RX-ZA2115, MOBIL-SHC220-1KG, SEAL-ZA2115-V — all in stock
 | Manual retrieval | scikit-learn (TF-IDF), cosine similarity |
 | Maintenance database | SQLite |
 | RCA agent | Claude API (optional), template fallback |
-| Orchestration | LangGraph (planned) |
-| Dashboard | Streamlit (planned) |
+| Orchestration | LangGraph|
+| Dashboard | Streamlit |
 
 ---
 
