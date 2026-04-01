@@ -181,6 +181,7 @@ class RCAAgent:
     Args:
         manual_mcp  : initialized EquipmentManualMCP instance
         cmms_mcp    : initialized CMMSMCP instance
+        weather_mcp : initialized WeatherMCP instance (optional)
         api_key     : Anthropic API key (or set ANTHROPIC_API_KEY env var)
         model       : Claude model to use (default: claude-sonnet-4-20250514)
     """
@@ -188,11 +189,13 @@ class RCAAgent:
     def __init__(self,
                  manual_mcp,
                  cmms_mcp,
+                 weather_mcp=None,
                  api_key: Optional[str] = None,
                  model: str = "claude-sonnet-4-20250514"):
-        self.manual_mcp = manual_mcp
-        self.cmms_mcp   = cmms_mcp
-        self.model      = model
+        self.manual_mcp  = manual_mcp
+        self.cmms_mcp    = cmms_mcp
+        self.weather_mcp = weather_mcp
+        self.model       = model
 
         # Initialize Claude client if available
         self.client_ = None
@@ -245,27 +248,36 @@ class RCAAgent:
         print(f"{'='*60}")
 
         # ── Step 2: Query Equipment Manual MCP ────────────────────────
-        print("\n[1/3] Querying Equipment Manual MCP ...")
+        n_steps = 4 if self.weather_mcp else 3
+        print(f"\n[1/{n_steps}] Querying Equipment Manual MCP ...")
         manual_results = self._query_manual(fault_type, mcp_log)
 
         # ── Step 3: Query CMMS MCP ────────────────────────────────────
-        print("[2/3] Querying CMMS MCP ...")
+        print(f"[2/{n_steps}] Querying CMMS MCP ...")
         cmms_summary = self._query_cmms(bearing_id, mcp_log)
 
+        # ── Step 3b: Query Weather MCP (if available) ─────────────────
+        weather_impact = None
+        if self.weather_mcp:
+            print(f"[3/{n_steps}] Querying Weather MCP ...")
+            weather_impact = self._query_weather(mcp_log)
+
         # ── Step 4: Generate RCA report ───────────────────────────────
-        print("[3/3] Generating RCA report ...")
+        print(f"[{n_steps}/{n_steps}] Generating RCA report ...")
         if self.client_:
             report = self._generate_llm_report(
-                rca_text, manual_results, cmms_summary, fault_type
+                rca_text, manual_results, cmms_summary,
+                fault_type, weather_impact
             )
         else:
             report = self._generate_template_report(
                 rca_text, manual_results, cmms_summary,
-                fault_type, bearing_id
+                fault_type, bearing_id, weather_impact
             )
 
         report["manual_results"]  = manual_results
         report["cmms_summary"]    = cmms_summary
+        report["weather_impact"]  = weather_impact
         report["mcp_calls_made"]  = mcp_log
         report["bearing_id"]      = bearing_id
         report["fault_type"]      = fault_type
@@ -323,12 +335,31 @@ class RCAAgent:
 
         return summary
 
+    def _query_weather(self, mcp_log: list) -> dict:
+        """Query Weather MCP for environmental conditions."""
+        mcp_log.append({
+            "tool": "get_weather_impact",
+            "timestamp": datetime.now().isoformat(),
+        })
+        try:
+            impact = self.weather_mcp.get_weather_impact()
+            risk = impact.get("combined_risk", "UNKNOWN")
+            temp = impact.get("conditions", {}).get("temperature_c", "?")
+            humidity = impact.get("conditions", {}).get("humidity_pct", "?")
+            print(f"  → {temp}°C, {humidity}% humidity, "
+                  f"environmental risk: {risk}")
+            return impact
+        except Exception as e:
+            print(f"  ⚠ Weather MCP error: {e}")
+            return {"error": str(e)}
+
     # ── LLM report generation ─────────────────────────────────────────────
 
     def _generate_llm_report(self, rca_text: str,
                               manual_results: list,
                               cmms_summary: dict,
-                              fault_type: str) -> dict:
+                              fault_type: str,
+                              weather_impact: dict = None) -> dict:
         """Generate RCA report using Claude API."""
         # Build the user prompt with all context
         manual_context = "\n\n".join(
@@ -337,6 +368,13 @@ class RCAAgent:
         )
 
         cmms_context = cmms_summary.get("summary_text", "No CMMS data.")
+
+        weather_context = ""
+        if weather_impact and "error" not in weather_impact:
+            weather_context = f"""
+
+--- ENVIRONMENTAL CONDITIONS ---
+{weather_impact.get('assessment_text', 'No weather data.')}"""
 
         user_prompt = f"""Analyze this bearing fault and produce an RCA report.
 
@@ -348,6 +386,7 @@ class RCAAgent:
 
 --- CMMS MAINTENANCE HISTORY ---
 {cmms_context}
+{weather_context}
 
 --- DETECTED FAULT TYPE ---
 {fault_type}
@@ -399,7 +438,7 @@ Produce the structured RCA report as specified in your instructions."""
             print("  Falling back to template mode ...")
             return self._generate_template_report(
                 rca_text, manual_results, cmms_summary,
-                fault_type, "unknown"
+                fault_type, "unknown", weather_impact
             )
 
     # ── Template report generation (no API needed) ────────────────────────
@@ -408,7 +447,8 @@ Produce the structured RCA report as specified in your instructions."""
                                     manual_results: list,
                                     cmms_summary: dict,
                                     fault_type: str,
-                                    bearing_id: str) -> dict:
+                                    bearing_id: str,
+                                    weather_impact: dict = None) -> dict:
         """
         Generate RCA report using structured templates.
 
@@ -491,9 +531,12 @@ Recent work order findings:{wo_findings if wo_findings else ' No recent work ord
 ## PARTS REQUIRED
 {chr(10).join(parts_lines) if parts_lines else '  No compatible parts found in inventory.'}
 
+## ENVIRONMENTAL CONDITIONS
+{weather_impact.get('assessment_text', '  Weather data not available.') if weather_impact and 'error' not in (weather_impact or {}) else '  Weather MCP not connected.'}
+
 {'='*60}
 Report generated by BearingMind RCA Agent (template mode)
-MCP tools used: Equipment Manual MCP, CMMS MCP (SQLite)
+MCP tools used: Equipment Manual MCP, CMMS MCP (SQLite){', Weather MCP (Open-Meteo)' if weather_impact and 'error' not in (weather_impact or {}) else ''}
 {'='*60}
 """.strip()
 
@@ -685,6 +728,7 @@ def run_rca_pipeline(feature_matrix_path: str,
         RCA report dict
     """
     import pandas as pd
+    import builtins
 
     # These imports are here to avoid circular imports at module level
     # and to keep the module runnable standalone
@@ -695,10 +739,15 @@ def run_rca_pipeline(feature_matrix_path: str,
     from shap_explainer import BearingShapExplainer
     from mcp_equipment_manual import EquipmentManualMCP
     from mcp_cmms import CMMSMCP
+
+    # Pickle needs these classes in the __main__ module's global namespace
+    # when deserializing .pkl files. This injects them there regardless of
+    # whether this function is called from CLI or from another script.
     import __main__
     for cls in [BearingAnomalyDetector, SingleBearingDetector,
                 BearingRULPredictor, SingleBearingRUL, LSTMRULModel]:
         setattr(__main__, cls.__name__, cls)
+
     print("=" * 60)
     print("BearingMind — Full RCA Pipeline")
     print("=" * 60)
@@ -728,6 +777,9 @@ def run_rca_pipeline(feature_matrix_path: str,
         rul_pred.load_models(rul_dir)
         rul_pred.bearing_ids_ = sorted(rul_pred.predictors_.keys())
         print(f"  LSTM models loaded from {rul_dir}")
+    else:
+        print(f"  No saved LSTM models found at {rul_dir}, training from df ...")
+        rul_pred.fit_from_df(df)
 
     # ── Run SHAP ──────────────────────────────────────────────────────
     print("\n[3/6] Running SHAP explainer ...")
@@ -746,11 +798,22 @@ def run_rca_pipeline(feature_matrix_path: str,
     cmms_mcp = CMMSMCP(db_path=cmms_db)
     cmms_mcp.initialize()
 
+    # Weather MCP — calls Open-Meteo API (requires internet)
+    weather_mcp = None
+    try:
+        from mcp_weather import WeatherMCP
+        weather_mcp = WeatherMCP()
+        weather_mcp.fetch()
+        print("  Weather MCP: connected")
+    except Exception as e:
+        print(f"  Weather MCP: skipped ({e})")
+
     # ── Run RCA Agent ─────────────────────────────────────────────────
     print("\n[5/6] Running RCA Agent ...")
     rca = RCAAgent(
         manual_mcp=manual_mcp,
         cmms_mcp=cmms_mcp,
+        weather_mcp=weather_mcp,
         api_key=api_key,
     )
 
@@ -766,7 +829,7 @@ def run_rca_pipeline(feature_matrix_path: str,
 
     # Text report
     report_path = os.path.join(output_dir, "rca_report.txt")
-    with open(report_path, "w", encoding='utf-8') as f:
+    with open(report_path, "w", encoding="utf-8") as f:
         f.write(report["report_text"])
     print(f"  Report saved → {report_path}")
 
@@ -782,8 +845,8 @@ def run_rca_pipeline(feature_matrix_path: str,
         "recommended_actions": report["recommended_actions"],
         "timestamp":       datetime.now().isoformat(),
     }
-    with open(meta_path, "w", encoding='utf-8') as f:
-        json.dump(meta, f, indent=2)
+    with open(meta_path, "w", encoding="utf-8") as f:
+        json.dump(meta, f, indent=2, ensure_ascii=False)
     print(f"  Metadata saved → {meta_path}")
 
     cmms_mcp.close()
@@ -801,8 +864,21 @@ def run_rca_pipeline(feature_matrix_path: str,
 
 if __name__ == "__main__":
     import sys
+
+    # Reconfigure stdout/stderr to UTF-8 so Unicode characters (✓, →, etc.)
+    # print correctly on Windows consoles that default to cp1252.
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
+    if hasattr(sys.stderr, "reconfigure"):
+        sys.stderr.reconfigure(encoding="utf-8")
+
+    # These imports MUST be at the top level of __main__ (not inside a function)
+    # so that pickle can find the classes when deserializing .pkl model files.
+    # When pickle loads detector_b1_ch1.pkl, it looks for SingleBearingDetector
+    # in whatever module is __main__. If the import is inside run_rca_pipeline(),
+    # it's local to that function and pickle can't see it.
     from isolation_forest import BearingAnomalyDetector, SingleBearingDetector
-    from rul_lstm import BearingRULPredictor, SingleBearingRUL, LSTMRULModel    
+    from rul_lstm import BearingRULPredictor, SingleBearingRUL, LSTMRULModel
 
     if len(sys.argv) < 3:
         print("Usage: python rca_agent.py <feature_matrix.csv> "

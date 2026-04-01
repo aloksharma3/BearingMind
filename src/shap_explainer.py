@@ -326,8 +326,11 @@ class SingleBearingShapExplainer:
             x_win[np.newaxis], dtype=torch.float32
         ).to(self.rul_predictor.device_)
 
+        # cuDNN RNN backward requires training mode; restore eval() after.
+        self.rul_predictor.model_.train()
         shap_vals_win = self.grad_explainer_.shap_values(
             x_tensor)   # (1, window, n_features)
+        self.rul_predictor.model_.eval()
 
         # GradientExplainer with (batch,1) output returns a list of length=n_outputs
         # Each element has shape (batch, window, features)
