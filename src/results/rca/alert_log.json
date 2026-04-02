@@ -1,0 +1,62 @@
+[
+  {
+    "timestamp": "2026-03-31T23:20:42.247989",
+    "bearing_id": "b1_ch1",
+    "fault_type": "outer race fault",
+    "urgency": "CRITICAL",
+    "response": "Immediate — controlled shutdown required",
+    "notified": [
+      "R. Martinez",
+      "S. Williams",
+      "A. Kumar"
+    ],
+    "channels": [
+      "sms",
+      "email",
+      "slack:#critical-alerts"
+    ],
+    "work_order": "WO-2026-0331-AI"
+  },
+  {
+    "timestamp": "2026-03-31T23:20:42.248989",
+    "bearing_id": "b2_ch1",
+    "fault_type": "inner race fault",
+    "urgency": "HIGH",
+    "response": "Within 48 hours",
+    "notified": [
+      "J. Chen",
+      "A. Kumar"
+    ],
+    "channels": [
+      "email",
+      "slack:#maintenance"
+    ],
+    "work_order": "WO-2026-0331-AI"
+  },
+  {
+    "timestamp": "2026-03-31T23:20:42.257055",
+    "bearing_id": "b3_ch1",
+    "fault_type": "undetermined",
+    "urgency": "LOW",
+    "response": "Monitor and trend — no action required",
+    "notified": [],
+    "channels": [],
+    "work_order": null
+  },
+  {
+    "timestamp": "2026-04-01T00:07:55.263747",
+    "bearing_id": "b2_ch1",
+    "fault_type": "inner race fault",
+    "urgency": "HIGH",
+    "response": "Within 48 hours",
+    "notified": [
+      "J. Chen",
+      "A. Kumar"
+    ],
+    "channels": [
+      "email",
+      "slack:#maintenance"
+    ],
+    "work_order": "WO-2026-0401-AI"
+  }
+]

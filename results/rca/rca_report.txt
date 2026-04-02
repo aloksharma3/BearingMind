@@ -1,56 +1,58 @@
 ============================================================
 ROOT CAUSE ANALYSIS REPORT — BearingMind
 ============================================================
-Generated: 2026-03-28 20:24:33
-Asset: b2_ch1
+Generated: 2026-03-31 23:56:38
+Asset: b1_ch1
 
 ## DIAGNOSIS
-INNER RACE FAULT detected on b2_ch1 based on multi-model
+IMPULSIVE FAULT (EARLY STAGE) detected on b1_ch1 based on multi-model
 SHAP analysis (Isolation Forest anomaly detection + LSTM RUL prediction).
 
 ## EVIDENCE (SHAP Analysis)
-Bearing: b2_ch1
-Snapshot index: 950
-Anomaly score: 0.1407
-RUL score: 0.1614 (WARNING)
+Bearing: b1_ch1
+Snapshot index: 100
+Anomaly score: -0.1219
+RUL score: 0.6844 (NORMAL)
 
 Top anomaly drivers (Isolation Forest SHAP):
-  - Dominant frequency (Hz): -0.8814 (↓ toward normal)
-  - Shape factor: -0.6533 (↓ toward normal)
-  - BPFI band energy (inner race): -0.5305 (↓ toward normal)
+  - High-freq energy ratio: -0.5958 (↓ toward normal)
+  - Dominant frequency (Hz): +0.2063 (↑ toward anomaly)
+  - Peak-to-peak amplitude: +0.2018 (↑ toward anomaly)
 
 Top RUL drivers (LSTM SHAP):
-  - Spectral centroid (Hz): -0.0083 (↓ reduces RUL)
-  - Spectral bandwidth (Hz): -0.0075 (↓ reduces RUL)
-  - RMS vibration: +0.0064 (↑ increases RUL)
+  - Crest factor: +0.0000 (↑ increases RUL)
+  - BPFI band energy (inner race): -0.0000 (↓ reduces RUL)
+  - Impulse factor: +0.0000 (↑ increases RUL)
 
-Probable fault type: inner race fault
+Probable fault type: impulsive fault (early stage)
 
 ## PROBABLE ROOT CAUSE
+
+Per Vibration Diagnostics Handbook (Section 2.1 — Time-Domain Indicators):
+  Kurtosis is the most sensitive early indicator of bearing damage. A healthy bearing produces vibration with Gaussian distribution (kurtosis ≈ 3.0). Incipient spalling creates sharp impulses that raise kurtosis above 4.0. Values above 6.0 indicate definite damage. Crest factor (peak / RMS) above 6.0 ...
+
+Per Vibration Diagnostics Handbook (Section 3.1 — Four-Stage Bearing Failure Model):
+  Stage 1 (Subsurface origin): Microscopic cracks form below the raceway surface. No detectable vibration change. Detectable only by ultrasonic emission (>250 kHz). Stage 2 (Defect initiation): Cracks reach surface, creating small spalls. BPFI/BPFO/BSF frequencies appear. Kurtosis rises. RMS may still...
 
 Per SKF Bearing Maintenance Guide (Chapter 3.1 — Inner Race Fault Diagnosis):
   Inner race faults produce characteristic vibration patterns at the Ball Pass Frequency Inner race (BPFI). The BPFI signature appears as periodic impulses modulated by the shaft rotation frequency. Early-stage inner race defects cause elevated kurtosis in the time-domain signal before any audible cha...
 
-Per SKF Bearing Maintenance Guide (Chapter 3.2 — Outer Race Fault Diagnosis):
-  Outer race defects generate vibration at the Ball Pass Frequency Outer race (BPFO). Unlike inner race faults, BPFO signatures remain relatively stable in amplitude because the defect is stationary relative to the sensor mounting point. Common root causes include: (1) Improper mounting — the bearing ...
-
 
 ## MAINTENANCE HISTORY CONTEXT
-Days since last maintenance: 118
+Days since last maintenance: 28
 Recent work order findings:
-  - WO-2003-0299 (2003-10-20): BRG-002 stable. RMS 0.40 mm/s. No concerns.
-  - WO-2003-0143 (2003-07-15): Bearing installed correctly. Baseline vibration RMS 0.38 mm/s. Temperature 33°C.
+  - WO-2004-0015 (2004-01-18): BRG-001 RMS 0.51 mm/s — slight increase from baseline but within normal band. Grease sample sent to lab: no metallic particles detected. Bearing tempe
+  - WO-2003-0298 (2003-10-20): BRG-001 vibration stable at RMS 0.45 mm/s. No significant change from baseline. Bearing temperature 36°C. Grease condition: acceptable.
 
 ## RECOMMENDED ACTIONS
-1. Schedule emergency maintenance within 48 hours. Reduce operational load if possible until maintenance is performed.
-2. Inspect lubrication condition — inadequate grease is the primary cause of inner race spalling (60% of cases). Check re-greasing log in CMMS.
-3. Verify shaft alignment and interference fit — excessive preload accelerates inner race fatigue.
-4. Order replacement bearing and schedule installation during next available maintenance window.
-5. Verify replacement bearing RX-ZA2115 (3 in stock at Warehouse A — Shelf B3-07). Reserve one unit for this work order.
-6. Document all findings and corrective actions in CMMS work order. Record baseline vibration after maintenance for future comparison.
+1. Perform detailed vibration spectrum analysis to confirm specific fault frequency (BPFI/BPFO/BSF).
+2. Inspect bearing for visible spalling — if confirmed, schedule replacement before next planned shutdown.
+3. Review lubrication schedule — adjust re-grease interval if currently exceeding manufacturer recommendation.
+4. Verify replacement bearing RX-ZA2115 (3 in stock at Warehouse A — Shelf B3-07). Reserve one unit for this work order.
+5. Document all findings and corrective actions in CMMS work order. Record baseline vibration after maintenance for future comparison.
 
 ## URGENCY LEVEL
-HIGH
+LOW
 
 ## PARTS REQUIRED
   - RX-ZA2115: Rexnord ZA-2115 double row bearing — IN STOCK (3 available)
@@ -58,7 +60,29 @@ HIGH
   - SEAL-ZA2115-V: Viton seal ring for ZA-2115 bearing housing — IN STOCK (6 available)
   - PCB-353B33: PCB Piezotronics 353B33 accelerometer — IN STOCK (2 available)
 
+## ENVIRONMENTAL CONDITIONS
+=== Environmental Conditions (Weather MCP) ===
+
+Location: Cincinnati, OH (NASA IMS test rig location)
+Timestamp: 2026-03-31T23:45
+Source: Open-Meteo API (current)
+
+Temperature: 21.7°C (range: 17.7–27.1°C)
+Humidity: 53% (range: 43–74%)
+Wind: 17.5 km/h
+
+Overall environmental risk: LOW
+
+Temperature impact (LOW):
+  Ambient temperature (21.7°C) is within normal range. No temperature-related bearing health concerns.
+
+Humidity impact (LOW):
+  Humidity (53%) is within normal range. No moisture-related bearing health concerns.
+
+Thermal cycling (LOW):
+  Daily temperature range (9.4°C) is small. Minimal thermal cycling concern.
+
 ============================================================
 Report generated by BearingMind RCA Agent (template mode)
-MCP tools used: Equipment Manual MCP, CMMS MCP (SQLite)
+MCP tools used: Equipment Manual MCP, CMMS MCP (SQLite), Weather MCP (Open-Meteo)
 ============================================================

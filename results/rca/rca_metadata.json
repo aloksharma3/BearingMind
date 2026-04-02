@@ -1,33 +1,36 @@
 {
-  "bearing_id": "b2_ch1",
-  "fault_type": "inner race fault",
-  "urgency": "HIGH",
+  "bearing_id": "b1_ch1",
+  "fault_type": "impulsive fault (early stage)",
+  "urgency": "LOW",
   "generation_mode": "template",
-  "snapshot_index": 950,
+  "snapshot_index": 100,
   "mcp_calls_made": [
     {
       "tool": "query_manual",
-      "query": "inner race BPFI fault diagnosis maintenance actions",
-      "timestamp": "2026-03-28T20:24:33.197999"
+      "query": "crest factor early stage bearing damage detection",
+      "timestamp": "2026-03-31T23:56:38.030129"
     },
     {
       "tool": "query_manual",
-      "query": "bearing lubrication inner race spalling",
-      "timestamp": "2026-03-28T20:24:33.198999"
+      "query": "lubrication schedule preventive maintenance",
+      "timestamp": "2026-03-31T23:56:38.036133"
     },
     {
       "tool": "get_maintenance_summary",
-      "asset_id": "b2_ch1",
-      "timestamp": "2026-03-28T20:24:33.199997"
+      "asset_id": "b1_ch1",
+      "timestamp": "2026-03-31T23:56:38.038127"
+    },
+    {
+      "tool": "get_weather_impact",
+      "timestamp": "2026-03-31T23:56:38.043165"
     }
   ],
   "recommended_actions": [
-    "Schedule emergency maintenance within 48 hours. Reduce operational load if possible until maintenance is performed.",
-    "Inspect lubrication condition \u2014 inadequate grease is the primary cause of inner race spalling (60% of cases). Check re-greasing log in CMMS.",
-    "Verify shaft alignment and interference fit \u2014 excessive preload accelerates inner race fatigue.",
-    "Order replacement bearing and schedule installation during next available maintenance window.",
-    "Verify replacement bearing RX-ZA2115 (3 in stock at Warehouse A \u2014 Shelf B3-07). Reserve one unit for this work order.",
+    "Perform detailed vibration spectrum analysis to confirm specific fault frequency (BPFI/BPFO/BSF).",
+    "Inspect bearing for visible spalling — if confirmed, schedule replacement before next planned shutdown.",
+    "Review lubrication schedule — adjust re-grease interval if currently exceeding manufacturer recommendation.",
+    "Verify replacement bearing RX-ZA2115 (3 in stock at Warehouse A — Shelf B3-07). Reserve one unit for this work order.",
     "Document all findings and corrective actions in CMMS work order. Record baseline vibration after maintenance for future comparison."
   ],
-  "timestamp": "2026-03-28T20:24:33.201001"
+  "timestamp": "2026-03-31T23:56:38.044145"
 }
