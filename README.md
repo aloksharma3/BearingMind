@@ -4,8 +4,6 @@
 
 BearingMind detects bearing faults, predicts remaining useful life, explains *why* the fault is happening using SHAP, then routes the evidence through a chain of AI agents that query equipment manuals, maintenance databases, and live weather conditions to produce a structured Root Cause Analysis report — with specific parts, actions, and urgency levels displayed in a real-time React dashboard.
 
-Designed to demonstrate the architecture used in production systems at companies like Schneider Electric, Siemens, ABB, and GE Vernova.
-
 ---
 
 ## What it does
@@ -166,8 +164,6 @@ python shap_explainer.py ../results/feature_matrix.csv ../results ../results/sha
 python api/server.py
 ```
 
-Open **http://localhost:8000** in your browser.
-
 - Use the slider to select any snapshot (0–983)
 - Click **Analyze Live** to run the full DETECT → EXPLAIN → DIAGNOSE → ALERT pipeline
 - The agentic path in the topbar lights up as each node completes
@@ -288,7 +284,7 @@ RCA and alerting only run when there is a real problem: `anomaly_count > 0` OR `
 
 ## Dashboard
 
-The React dashboard (served at `http://localhost:8000`) shows:
+The React dashboard shows:
 
 - **Topbar** — agentic pipeline path (DETECT → EXPLAIN → DIAGNOSE → ALERT), lights up as nodes execute
 - **Stat cards** — most critical bearing (lowest RUL), highest anomaly score, system status, anomaly count
@@ -302,23 +298,20 @@ The React dashboard (served at `http://localhost:8000`) shows:
 
 ## Roadmap
 
-- [x] Feature extraction (16 features × 4 bearings)
-- [x] Isolation Forest anomaly detection
-- [x] LSTM remaining useful life prediction
-- [x] CNN autoencoder (visual anomaly detection)
-- [x] SHAP explainability layer (sign-corrected for IF)
-- [x] Equipment Manual MCP server (TF-IDF RAG)
-- [x] CMMS MCP server (SQLite)
-- [x] Weather MCP (Open-Meteo live conditions)
-- [x] RCA agent with 3-tool MCP integration
-- [x] Alert agent (urgency-based routing + CMMS work order creation)
-- [x] FastAPI backend with live inference endpoint
-- [x] React dashboard with real-time SHAP, RCA, and agentic pipeline visualization
-- [x] False-positive guard (RCA gated on actual anomalies)
-- [ ] LangGraph orchestrator (conditional agent routing with graph visualization)
-- [ ] Digital twin integration
-- [ ] Demo video
-
+-  Feature extraction (16 features × 4 bearings)
+-  Isolation Forest anomaly detection
+-  LSTM remaining useful life prediction
+-  CNN autoencoder (visual anomaly detection)
+-  SHAP explainability layer (sign-corrected for IF)
+-  Equipment Manual MCP server (TF-IDF RAG)
+-  CMMS MCP server (SQLite)
+-  Weather MCP (Open-Meteo live conditions)
+-  RCA agent with 3-tool MCP integration
+-  Alert agent (urgency-based routing + CMMS work order creation)
+-  FastAPI backend with live inference endpoint
+-  React dashboard with real-time SHAP, RCA, and agentic pipeline visualization
+-  False-positive guard (RCA gated on actual anomalies)
+-  LangGraph orchestrator (conditional agent routing with graph visualization)
 ---
 
 ## Tech stack
@@ -342,7 +335,7 @@ The React dashboard (served at `http://localhost:8000`) shows:
 
 ## Author
 
-**Alok** — MS student at Northeastern University. 6 years of industry experience in industrial IoT, SCADA systems, and enterprise automation (L&T, Schneider Electric). Building at the intersection of industrial OT domain knowledge and AI/ML.
+**Alok** — MS student at Northeastern University. 6 years of industry experience in industrial IoT, SCADA systems, and enterprise automation (L&T, Schneider Electric). Building at the intersection of AI/ML and industrial OT domain knowledge.
 
 ---
 
